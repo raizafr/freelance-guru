@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "icomoon";
+    src: url("/public/fonts/icomoon.ttf") format(''truetype'');
+    font-weight: 900; /* Black weight is typically 900 */
+    font-style: normal;
+}
+@font-face {
+    font-family: "icomoon";
+    src: url("/public/fonts/icomoon.ttf") format(''truetype'');
+    font-weight: 900; /* Black weight is typically 900 */
+    font-style: italic;
+}
+
+/* Roboto Bold */
+@font-face {
+    font-family: "icomoon";
+    src: url("/public/fonts/icomoon.ttf") format(''truetype'');
+    font-weight: 700; /* Bold weight is typically 700 */
+    font-style: normal;
+}
+
+body {
+    font-family: "icomoon", sans-serif;
+    font-weight: 400;
+}
