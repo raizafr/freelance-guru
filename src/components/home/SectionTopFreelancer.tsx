@@ -22,8 +22,8 @@ export default function SectionTopFreelancer() {
       </div>
       <div className="flex justify-center pt-10">
       <button className="px-5 py-2 rounded bg-[#196EAF] text-white font-semibold w-fit">
-                  See All Skills
-                </button>
+        See All Skills
+      </button>
       </div>
     </section>
   );
