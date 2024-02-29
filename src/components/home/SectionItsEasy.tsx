@@ -1,5 +1,5 @@
-import CardFIndTopFreelance from "@/app/card/CardFIndTopFreelance";
-import CardItsEasy from "@/app/card/CardItsEasy";
+import CardFIndTopFreelance from "@/components/card/CardFIndTopFreelance";
+import CardItsEasy from "@/components/card/CardItsEasy";
 import React from "react";
 
 export default function SectionItsEasy() {

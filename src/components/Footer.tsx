@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#2B3247] p-10 text-white bottom-0">
-      <div className="footer container mx-auto px-12">
+      <div className="footer container mx-auto px-3 md:px-12 ">
         <nav>
           <h6 className="footer-title">Navigate</h6>
           <a className="link link-hover">Home</a>

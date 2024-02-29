@@ -5,13 +5,13 @@ export default function SectionHero() {
   return (
     <div className="bg-cover bg-[url('/svg/banner.svg')]">
       <section className="flex container mx-auto text-white">
-        <div className="flex-1 space-y-7 py-32 px-12">
+        <div className="flex-1 space-y-7 py-20 md:py-20 lg:py-32 px-3 md:px-12">
           <h1 className="text-5xl font-bold">Find & Hire Expert Freelancers</h1>
           <h3 className="font-semibold text-lg">
             Work with the best freelance talent from around the world on our
             secure, flexible and cost-effective platform.
           </h3>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap">
             <input
               type="text"
               placeholder="What skill are you looking for?"

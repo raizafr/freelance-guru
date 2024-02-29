@@ -1,4 +1,4 @@
-import CardItsEasy from "@/app/card/CardItsEasy";
+import CardItsEasy from "@/components/card/CardItsEasy";
 import Image from "next/image";
 import React from "react";
 
