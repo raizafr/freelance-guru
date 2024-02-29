@@ -1,0 +1,43 @@
+import CardFIndTopFreelance from "@/app/card/CardFIndTopFreelance";
+import CardItsEasy from "@/app/card/CardItsEasy";
+import React from "react";
+
+export default function SectionItsEasy() {
+  return (
+    <section className="container mx-auto lg:px-12 px-3 md:px-5 py-16">
+      <h1 className="text-[35px] leading-[53px] font-[500] text-center">
+        It{"'"}s Easy to Get Work Done on Guru
+      </h1>
+      <div className="flex justify-center pt-2">
+        <div className="w-20 h-0.5 bg-[#2777C6] text-center" />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-10">
+        <CardItsEasy
+          icon={"/svg/programing-svgrepo-com.svg"}
+          title="Post a Job"
+          subTitle="Create your free job posting and start receiving Quotes within hours."
+        />
+        <CardItsEasy
+          icon={"/svg/programing-svgrepo-com.svg"}
+          title="Hire Freelancers"
+          subTitle="Compare the Quotes you receive and hire the best freelance professionals for the job."
+        />
+        <CardItsEasy
+          icon={"/svg/programing-svgrepo-com.svg"}
+          title="Get Work Done"
+          subTitle="Decide on how and when payments will be made and use WorkRooms to collaborate, communicate and track work."
+        />
+        <CardItsEasy
+          icon={"/svg/programing-svgrepo-com.svg"}
+          title="Make Secure Payments"
+          subTitle="Choose from multiple payment methods with SafePay payment protection."
+        />
+      </div>
+      <div className="flex justify-center pt-10">
+        <button className="px-5 py-2 rounded bg-[#196EAF] text-white font-semibold w-fit">
+          See How Guru Works
+        </button>
+      </div>
+    </section>
+  );
+}

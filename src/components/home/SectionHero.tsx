@@ -15,17 +15,17 @@ export default function SectionHero() {
             <input
               type="text"
               placeholder="What skill are you looking for?"
-              className="focus:outline-none border border-transparent focus:border-blue-500 rounded-md px-3 py-2.5 flex-1 text-black"
+              className="focus:outline-none border border-transparent focus:border-blue-500 rounded-md px-3 py-2.5 flex-1 text-black text-sm md:text-base"
             />
             <div>Or</div>
             <Link
               href={"#"}
-              className="bg-[#045A9D] px-5 py-2.5 text-white rounded-md"
+              className="bg-[#045A9D] px-5 py-2.5 text-white rounded-md text-sm md:text-base"
             >
               Post a Job - It{"'"}s Free
             </Link>
           </div>
-          <div className="leading-[19px] space-x-1">
+          <div className="leading-[19px] flex gap-1 flex-wrap">
             <Link
               href={"#"}
               className="font-medium text-[13px] border rounded px-2 py-0.5 text-[#808894] border-[#808894] hover:border-white hover:text-white duration-200"
@@ -58,7 +58,7 @@ export default function SectionHero() {
             </Link>
           </div>
         </div>
-        <div className="flex-none w-1/3 bg-[url('/images/bannerguy.avif')] bg-cover bg-left-bottom"></div>
+        <div className="flex-none w-1/3 bg-[url('/images/bannerguy.avif')] bg-cover bg-left-bottom hidden lg:block"></div>
       </section>
     </div>
   )
