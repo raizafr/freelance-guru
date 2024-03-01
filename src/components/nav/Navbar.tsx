@@ -39,23 +39,104 @@ export default function Navbar() {
         </div>
         <div className="flex-none">
           <ul className="flex items-center gap-2">
-            <div className="bg-white pl-2 py-1 rounded-md flex items-center gap-1">
-              <IoChatboxSharp />
-              <IoIosArrowDown className="scale-50" />
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="bg-white pl-2 py-1 rounded-md flex items-center gap-1"
+              >
+                <IoChatboxSharp />
+                <IoIosArrowDown className="scale-50" />
+              </div>
+              <div
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 min-w-72"
+              >
+                <div className="font-semibold border-b py-1">Messages</div>
+                <div className="min-h-56 max-h-80">
+                  <p className="text-center pt-6">
+                    There are no alerts to display.
+                  </p>
+                </div>
+                <div className=" border-t flex justify-center items-center">
+                  <Link
+                    href={"#"}
+                    className="text-blue-500 hover:underline text-xs pt-1.5"
+                  >
+                    View All Message
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="bg-white pl-2 py-1 rounded-md flex items-center gap-1">
-              <IoNotifications />
-              <IoIosArrowDown className="scale-50" />
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="bg-white pl-2 py-1 rounded-md flex items-center gap-1"
+              >
+                <IoNotifications />
+                <IoIosArrowDown className="scale-50" />
+              </div>
+              <div
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 min-w-72"
+              >
+                <div className="font-semibold border-b py-1">Notification</div>
+                <div className="min-h-56 max-h-80">
+                  <p className="text-center pt-6">
+                    There are no alerts to display.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-1">
-              <Image
-                src={"https://placehold.co/100x100.png"}
-                className="rounded-md"
-                alt="default"
-                width={30}
-                height={30}
-              />
-              <IoIosArrowDown className="scale-50" />
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="flex items-center gap-1 hover:scale-105 duration-200"
+              >
+                <Image
+                  src={"https://placehold.co/100x100.png"}
+                  className="rounded-md"
+                  alt="default"
+                  width={30}
+                  height={30}
+                />
+                <IoIosArrowDown className="scale-50" />
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 w-52"
+              >
+                <li>
+                  <Link href={"#"}>Edit Account</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Edit Profile</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Buy Bids</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Membership</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Manage Cash Account</Link>
+                </li>
+                <div className="border-b py-1" />
+                <div className="px-4 py-2 text-gray-400">ACCOUNT TEAM</div>
+                <li>
+                  <Link href={"#"}>Manage Team</Link>
+                </li>
+                <div className="border-b py-1" />
+                <div className="py-1" />
+                <li>
+                  <Link href={"#"}>Help</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Logout</Link>
+                </li>
+              </ul>
             </div>
           </ul>
         </div>
