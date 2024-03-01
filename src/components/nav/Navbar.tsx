@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,9 +7,61 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosLogIn } from "react-icons/io";
 import { RxPencil2 } from "react-icons/rx";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { usePathname } from "next/navigation";
+import { IoSearch } from "react-icons/io5";
+import { IoChatboxSharp } from "react-icons/io5";
+import { IoNotifications } from "react-icons/io5";
 
 export default function Navbar() {
-  return (
+  const pathName = usePathname();
+
+  return pathName.startsWith("/pro") ? (
+    <div className="border-b bg-[#F5F5F5]">
+      <nav className="navbar container mx-auto lg:px-12 ">
+        <div className="flex-1 flex items-center lg:gap-10 md:gap-4">
+          <Image
+            src={"/svg/logo.svg"}
+            width={100}
+            height={100}
+            alt="logo"
+            loading="lazy"
+          />
+          <div className="hidden md:flex items-center">
+            <input
+              type="text"
+              placeholder="Search Jobs"
+              className="px-3 py-1.5 rounded-l-md focus:outline-none border focus:border-blue-500 flex-1"
+            />
+            <button className=" w-10 border py-2.5 flex justify-center rounded-r-md hover:text-blue-500 duration-200">
+              <IoSearch className="" />
+            </button>
+          </div>
+        </div>
+        <div className="flex-none">
+          <ul className="flex items-center gap-2">
+            <div className="bg-white pl-2 py-1 rounded-md flex items-center gap-1">
+              <IoChatboxSharp />
+              <IoIosArrowDown className="scale-50" />
+            </div>
+            <div className="bg-white pl-2 py-1 rounded-md flex items-center gap-1">
+              <IoNotifications />
+              <IoIosArrowDown className="scale-50" />
+            </div>
+            <div className="flex items-center gap-1">
+              <Image
+                src={"https://placehold.co/100x100.png"}
+                className="rounded-md"
+                alt="default"
+                width={30}
+                height={30}
+              />
+              <IoIosArrowDown className="scale-50" />
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  ) : (
     <>
       <div className="border-b hidden lg:block">
         <nav className="navbar bg-base-100 container mx-auto lg:px-12 ">
@@ -117,13 +171,19 @@ export default function Navbar() {
                   Post a Job
                 </button>
               </li>
-              <Link href={'/register'} className="font-semibold hover:text-blue-500 duration-200 text-lg flex items-center gap-1">
+              <Link
+                href={"/register"}
+                className="font-semibold hover:text-blue-500 duration-200 text-lg flex items-center gap-1"
+              >
                 <span>
                   <RxPencil2 />
                 </span>
                 <span>Sign Up</span>
               </Link>
-              <Link href={'/login'} className="font-semibold hover:text-blue-500 duration-200 text-lg flex items-center gap-1">
+              <Link
+                href={"/login"}
+                className="font-semibold hover:text-blue-500 duration-200 text-lg flex items-center gap-1"
+              >
                 <span>
                   <IoIosLogIn />
                 </span>
