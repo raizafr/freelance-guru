@@ -45,12 +45,33 @@ export default function Navbar() {
                 role="button"
                 className="bg-white pl-2 py-1 rounded-md flex items-center gap-1"
               >
+                <IoNotifications />
+                <IoIosArrowDown className="scale-50" />
+              </div>
+              <div
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 min-w-60"
+              >
+                <div className="font-semibold border-b py-1">Notification</div>
+                <div className="min-h-56 max-h-80">
+                  <p className="text-center pt-6">
+                    There are no alerts to display.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="bg-white pl-2 py-1 rounded-md flex items-center gap-1"
+              >
                 <IoChatboxSharp />
                 <IoIosArrowDown className="scale-50" />
               </div>
               <div
                 tabIndex={0}
-                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 min-w-72"
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 w-72"
               >
                 <div className="font-semibold border-b py-1">Messages</div>
                 <div className="min-h-56 max-h-80">
@@ -68,27 +89,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="bg-white pl-2 py-1 rounded-md flex items-center gap-1"
-              >
-                <IoNotifications />
-                <IoIosArrowDown className="scale-50" />
-              </div>
-              <div
-                tabIndex={0}
-                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 min-w-72"
-              >
-                <div className="font-semibold border-b py-1">Notification</div>
-                <div className="min-h-56 max-h-80">
-                  <p className="text-center pt-6">
-                    There are no alerts to display.
-                  </p>
-                </div>
-              </div>
-            </div>
+
             <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
