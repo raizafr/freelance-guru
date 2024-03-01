@@ -15,9 +15,6 @@ export default function NavDashboard() {
           }`}>
           Dashboard
         </Link>
-        <Link href={"#"} className="px-4 py-2">
-          Find Work
-        </Link>
         <Link href={"/pro/jobs"} className={`px-4 py-2 ${
             pathName.startsWith("/pro/jobs") ? "bg-white rounded-t-md" : ""
           }`}>
