@@ -11,7 +11,7 @@ export default function ProfileBuild() {
             Edit Services or Dedicated Resources
           </div>
           <Link
-            href={"#"}
+            href={"/pro/profileBuild/addServiceorDedicatedResource"}
             className="bg-[#2777C6] hover:underline text-white p-1.5 rounded hover:scale-105 duration-200"
           >
             <FaPlus className="" />

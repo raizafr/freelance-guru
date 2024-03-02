@@ -40,8 +40,12 @@ export default function NavSideProfileBuild() {
         </Link>
         <div className="flex flex-col gap-2">
           <Link
-            href={"#"}
-            className="hover:bg-gray-200 mx-5 px-1 py-0.5 rounded-md duration-200"
+            href={"/pro/profileBuild"}
+            className={`hover:bg-gray-200 mx-5 px-1 py-0.5 rounded-md duration-200 ${
+              pathName == "/pro/profileBuild" || pathName == "/pro/profileBuild/addServiceorDedicatedResource"
+                ? "text-black font-semibold"
+                : ""
+            }`}
           >
             Services/Dedicated Resources
           </Link>
