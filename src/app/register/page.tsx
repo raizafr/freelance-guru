@@ -8,13 +8,6 @@ export default function Register() {
         <h1 className="text-[32px] leading-[46px]">Grow with Guru</h1>
         <div className="w-64 carousel rounded-box">
           <div className="carousel-item w-full flex-col">
-            <Image
-              src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
-              width={60}
-              height={0}
-              className="w-full"
-              alt="Tailwind CSS Carousel component"
-            />
             <div>
               <h2 className="font-semibold text-lg">
                 99% Customer Satisfaction
@@ -25,13 +18,6 @@ export default function Register() {
             </div>
           </div>
           <div className="carousel-item w-full flex-col">
-            <Image
-              src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
-              width={60}
-              height={0}
-              className="w-full"
-              alt="Tailwind CSS Carousel component"
-            />
             <div>
               <h2 className="font-semibold text-lg">Flexible Platform</h2>
               <h3 className="font-semibold text-base">
@@ -40,13 +26,6 @@ export default function Register() {
             </div>
           </div>
           <div className="carousel-item w-full flex-col">
-            <Image
-              src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
-              width={60}
-              height={0}
-              className="w-full"
-              alt="Tailwind CSS Carousel component"
-            />
             <div>
               <h2 className="font-semibold text-lg">Payment Protection</h2>
               <h3 className="font-semibold text-base">
@@ -55,13 +34,6 @@ export default function Register() {
             </div>
           </div>
           <div className="carousel-item w-full flex-col">
-            <Image
-              src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
-              width={60}
-              height={0}
-              className="w-full"
-              alt="Tailwind CSS Carousel component"
-            />
             <div>
               <h2 className="font-semibold text-lg">Lowest Transaction Fees</h2>
               <h3 className="font-semibold text-base">
@@ -71,61 +43,26 @@ export default function Register() {
           </div>
         </div>
       </div>
-      <div className="flex-1 pt-8 px-10 md:px-5 lg:px-20 space-y-5 pb-28">
+      <div className="flex-1 pt-8 px-10 md:px-5 lg:px-20 space-y-5 pb-28 justify-center items-center ">
         <h1 className="text-[32px] leading-[46px] text-center text-blue-500">
           Sign Up
         </h1>
         <div className="border-b" />
-        <div className="flex gap-10 justify-center">
-          <Image
-            src={"/svg/apple.svg"}
-            alt="apple"
-            width={50}
-            height={50}
-            loading="lazy"
-          />
-          <Image
-            src={"/svg/facebook.svg"}
-            alt="facebook"
-            width={50}
-            height={50}
-            loading="lazy"
-          />
-          <Image
-            src={"/svg/linkedin.svg"}
-            alt="linkedin"
-            width={50}
-            height={50}
-            loading="lazy"
-          />
-          <Image
-            src={"/svg/google.svg"}
-            alt="google"
-            width={50}
-            height={50}
-            loading="lazy"
-          />
-        </div>
-        <div className="flex items-center gap-5">
-          <div className="border-b flex-1" />
-          <div>Or</div>
-          <div className="border-b flex-1" />
-        </div>
         <form className="space-y-5">
           <input
             type="text"
-            className="border-blue-400 border focus:outline-none w-full px-5 py-2.5"
+            className="focus:border-blue-400 border focus:outline-none w-full px-5 py-2.5"
             placeholder="Email or Username"
           />
           <input
-            type="password"
-            className="border-blue-400 border focus:outline-none w-full px-5 py-2.5"
-            placeholder="Password"
+            type="email"
+            className="focus:border-blue-400 border focus:outline-none w-full px-5 py-2.5"
+            placeholder="Email"
           />
           <div className="flex justify-end">
-            <button className="px-5 py-3 rounded bg-[#196EAF] text-white font-semibold">
+            <Link href={'/register/chooseAccounType'} className="px-5 py-3 rounded bg-[#196EAF] text-white font-semibold">
               Proceed
-            </button>
+            </Link>
           </div>
         </form>
         <div className="text-[14px] leading-[21px] text-center">
