@@ -13,7 +13,7 @@ import { IoChatboxSharp } from "react-icons/io5";
 import { IoNotifications } from "react-icons/io5";
 
 export default function Navbar() {
-  const [showSidebar, setShowSidebar] = useState<boolean>(true);
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const pathName = usePathname();
 
   return pathName.startsWith("/pro") ? (
