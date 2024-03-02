@@ -2,17 +2,18 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosLogIn } from "react-icons/io";
 import { RxPencil2 } from "react-icons/rx";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { usePathname } from "next/navigation";
-import { IoSearch } from "react-icons/io5";
+import { IoCloseSharp, IoSearch } from "react-icons/io5";
 import { IoChatboxSharp } from "react-icons/io5";
 import { IoNotifications } from "react-icons/io5";
 
 export default function Navbar() {
+  const [showSidebar, setShowSidebar] = useState<boolean>(true);
   const pathName = usePathname();
 
   return pathName.startsWith("/pro") ? (
@@ -277,18 +278,20 @@ export default function Navbar() {
       </div>
       <nav className="navbar bg-base-100 lg:hidden container mx-auto px-3">
         <div className="navbar-start">
-          <div className="">
+          <button className="" onClick={() => setShowSidebar(!showSidebar)}>
             <GiHamburgerMenu className="scale-150" />
-          </div>
+          </button>
         </div>
         <div className="navbar-center">
-          <Image
-            src={"/svg/logo.svg"}
-            width={100}
-            height={100}
-            alt="logo"
-            loading="lazy"
-          />
+          <Link href={"/"}>
+            <Image
+              src={"/svg/logo.svg"}
+              width={100}
+              height={100}
+              alt="logo"
+              loading="lazy"
+            />
+          </Link>
         </div>
         <div className="navbar-end">
           <button className="px-3 py-2 rounded bg-[#196EAF] text-white font-semibold text-sm ">
@@ -296,6 +299,134 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+      <aside
+        className={`top-0 left-0 w-[80vw] sm:w-[50vw] md:w-[30vw] py-2 bg-[#F7F7F7] fixed h-full lg:hidden ease-in-out duration-300 z-10 ${
+          showSidebar ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex max-h-screen flex-col">
+          <div className="flex justify-end py-5 px-5 border-b flex-none shadow-md">
+            <button
+              className="hover:scale-105 duration-200"
+              onClick={() => setShowSidebar(!showSidebar)}
+            >
+              <IoCloseSharp className="scale-[2]" />
+            </button>
+          </div>
+          <ul className="text-sm font-semibold overflow-y-auto flex-1">
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Find Freelancers
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Find a Job
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                How It Works
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                About Guru
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Why Guru
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Blog
+              </Link>
+            </li>
+            <div className="border-b w-full pt-1" />
+            <div className="w-full pt-1" />
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Enterprice Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Purchase Order Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                Work Agreements
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"#"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+              >
+                SafePay
+              </Link>
+            </li>
+            <div className="border-b w-full pt-1" />
+            <div className="w-full pt-1" />
+            <li>
+              <Link
+                href={"/register"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+                onClick={() => setShowSidebar(!showSidebar)}
+              >
+                Sign Up
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/login"}
+                className="hover:underline block hover:bg-gray-300 px-5 py-3"
+                onClick={() => setShowSidebar(!showSidebar)}
+              >
+                Login
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </>
   );
 }

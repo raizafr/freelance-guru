@@ -57,7 +57,7 @@ export default function Dashboard() {
             <div className="px-4">
               <div className="flex items-center gap-2">
                 <BiMessageDots className="scale-150" />
-                <Link href={"#"} className="text-[#2777C6] hover:underline">
+                <Link href={"/pro/profileBuild/editAboutInfo"} className="text-[#2777C6] hover:underline">
                   Edit Profile
                 </Link>
               </div>

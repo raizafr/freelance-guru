@@ -10,14 +10,23 @@ export default function NavDashboard() {
   return (
     <div className="bg-[#F5F5F5]">
       <nav className="container mx-auto lg:px-12 flex text-sm font-[500]">
-        <Link href={"/pro/dashboard"} className={`px-4 py-2 ${
-            pathName.startsWith("/pro/dashboard") ? "bg-white rounded-t-md" : ""
-          }`}>
+        <Link
+          href={"/pro/dashboard"}
+          className={`px-4 py-2 ${
+            pathName.startsWith("/pro/dashboard") ||
+            pathName.startsWith("/pro/profileBuild")
+              ? "bg-white rounded-t-md"
+              : ""
+          }`}
+        >
           Dashboard
         </Link>
-        <Link href={"/pro/jobs"} className={`px-4 py-2 ${
+        <Link
+          href={"/pro/jobs"}
+          className={`px-4 py-2 ${
             pathName.startsWith("/pro/jobs") ? "bg-white rounded-t-md" : ""
-          }`}>
+          }`}
+        >
           Jobs
         </Link>
         <Link
