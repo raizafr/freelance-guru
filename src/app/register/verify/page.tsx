@@ -1,11 +1,41 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export default function Verify() {
-  const [otp, setOtp] = useState<string>("");
-  console.log(otp);
+  const [inputValues, setInputValues] = useState<any>(
+    Array.from({ length: 6 }, () => "")
+  );
+  const inputValue = inputValues.join("");
+  const router = useRouter();
+  const handleInputChange = (index: any, event: any) => {
+    const inputValue = event.target.value;
+    const newInputValues = [...inputValues];
+    newInputValues[index] = inputValue;
+
+    if (inputValue !== "") {
+      if (index < inputValues.length - 1) {
+        const nextInput = document.getElementById(`input-${index + 1}`);
+        nextInput?.focus();
+      }
+    }
+
+    setInputValues(newInputValues);
+  };
+
+  const handleKeyDown = (index: any, event: any) => {
+    if (event.key === "Backspace" && index > 0 && inputValues[index] === "") {
+      const newInputValues = [...inputValues];
+      newInputValues[index - 1] = "";
+      setInputValues(newInputValues);
+
+      const prevInput = document.getElementById(`input-${index - 1}`);
+      prevInput?.focus();
+    }
+  };
+
   return (
     <section className="container mx-auto flex md:shadow-xl my-5">
       <div className="bg-[#4F86C4] flex-1 text-center text-white pt-8 lg:px-20 px-5 hidden md:block">
@@ -59,44 +89,23 @@ export default function Verify() {
         <div className="text-center py-3 text-gray-700">
           Please enter the 6-digit code sent to your email
         </div>
-        <div className="space-y-5">
-          <label htmlFor="otp">
-            <div className="flex gap-3 md:gap-5 justify-between md:px-5 px-2">
-              <div className="space-y-2 flex-1">
-                <div className="text-2xl font-semibold text-center">1</div>
-                <div className="h-1 w-full bg-[#4F86C4]" />
-              </div>
-              <div className="space-y-2 flex-1">
-                <div className="text-2xl font-semibold text-center">1</div>
-                <div className="h-1 w-full bg-[#4F86C4]" />
-              </div>
-              <div className="space-y-2 flex-1">
-                <div className="text-2xl font-semibold text-center">1</div>
-                <div className="h-1 w-full bg-[#4F86C4]" />
-              </div>
-              <div className="space-y-2 flex-1">
-                <div className="text-2xl font-semibold text-center">1</div>
-                <div className="h-1 w-full bg-[#4F86C4]" />
-              </div>
-              <div className="space-y-2 flex-1">
-                <div className="text-2xl font-semibold text-center">1</div>
-                <div className="h-1 w-full bg-[#4F86C4]" />
-              </div>
-              <div className="space-y-2 flex-1">
-                <div className="text-2xl font-semibold text-center">1</div>
-                <div className="h-1 w-full bg-[#4F86C4]" />
-              </div>
+        <div className="flex flex-row items-center justify-between mx-auto w-full">
+          {inputValues.map((value: any, index: number) => (
+            <div key={index} className="w-14 h-14">
+              <input
+                id={`input-${index}`}
+                className="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
+                type="text"
+                name=""
+                maxLength={1}
+                value={value}
+                onChange={(e) => handleInputChange(index, e)}
+                onKeyDown={(e) => handleKeyDown(index, e)}
+              />
             </div>
-            <input
-              id="otp"
-              type="hidden"
-              max={6}
-              maxLength={6}
-              onChange={(e) => setOtp(e.target.value)}
-              className="focus:border-blue-400 border focus:outline-none w-full px-5 py-2.5"
-              placeholder="Password"
-            />
-          </label>
+          ))}
+        </div>
+        <div className="space-y-5">
           <div className="flex justify-between items-center px-5">
             <button className="text-sm text-blue-500">Resend Code</button>
             <button className="text-sm text-blue-500">Change Email</button>
@@ -108,12 +117,17 @@ export default function Verify() {
             >
               Back
             </Link>
-            <Link
-              href={"/register/pro"}
-              className="px-5 py-3 rounded bg-[#196EAF] text-white font-semibold"
+            <button
+              onClick={() => router.push("/register/pro")}
+              disabled={inputValue?.length == 6 ? false : true}
+              className={`${
+                inputValue?.length == 6
+                  ? "bg-[#196EAF] text-white cursor-pointer"
+                  : "text-[#196EAF] cursor-not-allowed"
+              } px-5 py-3 rounded  font-semibold disabled border border-[#196EAF]`}
             >
               Verify
-            </Link>
+            </button>
           </div>
         </div>
         <div className="text-[14px] leading-[21px] text-center">

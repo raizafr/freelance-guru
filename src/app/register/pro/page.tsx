@@ -1,10 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 
 export default function Pro() {
+  const [selectedImage, setSelectedImage] = useState<any>(null);
+  const router = useRouter();
+  const handleImageChange = (event: any) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader() as any;
+      reader.onloadend = () => {
+        setSelectedImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
   return (
-    <form className="container mx-auto px-3 lg:px-64 min-h-[90vh] flex flex-col justify-center items-center gap-5 mt-10">
+    <section className="container mx-auto px-3 lg:px-64 min-h-[90vh] flex flex-col justify-center items-center gap-5 mt-10">
       {/* Enter your public name */}
       <div className="border rounded flex-1 flex-col w-full">
         <div className="py-2 border-b text-xs bg-[#FAFAFA] px-4">
@@ -18,16 +33,25 @@ export default function Pro() {
         <div className="py-5 flex-1">
           <div className="flex flex-col justify-center items-center gap-4">
             <Image
-              src={"/images/def_fl_128.avif"}
+              src={selectedImage || "/images/def_fl_128.avif"}
               alt="default image"
               width={130}
               height={0}
               loading="lazy"
               className="border p-2"
             />
-            <button className="bg-[#DDDDDD] px-6 py-1 w-fit rounded-md text-sm">
-              Upload Foto
-            </button>
+            <label htmlFor="image">
+              <div className="bg-[#DDDDDD] px-6 py-1 w-fit rounded-md text-sm">
+                Upload Foto
+              </div>
+              <input
+                onChange={handleImageChange}
+                type="file"
+                className="hidden"
+                accept="image/*"
+                id="image"
+              />
+            </label>
           </div>
           <div className="px-6 space-y-2">
             <h2 className="text-sm">Screen Name</h2>
@@ -121,13 +145,13 @@ export default function Pro() {
       </div>
       {/* end Enter your Contact Information */}
       <div className="w-full mb-10 mt-5 ">
-        <Link
-          href={"/pro/profileBuild/editAboutInfo"}
+        <button
+          onClick={() => router.push("/pro/profileBuild/editAboutInfo")}
           className="px-5 py-2 rounded bg-[#196EAF] text-white font-semibold hover:scale-105 duration-200"
         >
-          Post a Job
-        </Link>
+          Save
+        </button>
       </div>
-    </form>
+    </section>
   );
 }

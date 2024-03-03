@@ -2,11 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
 export default function ChooseAccounType() {
   const [selectType, setSelectType] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const router = useRouter();
   return (
     <section className="container mx-auto flex md:shadow-xl my-5">
       <div className="bg-[#4F86C4] flex-1 text-center text-white pt-8 lg:px-20 px-5 hidden md:block">
@@ -114,11 +117,12 @@ export default function ChooseAccounType() {
           <div className="text-sm">Set password</div>
           <div className="flex-1 border-b" />
         </div>
-        <form className="space-y-5">
+        <div className="space-y-5">
           <input
             type="password"
             className="focus:border-blue-400 border focus:outline-none w-full px-5 py-2.5"
             placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
           />
           <div className="space-y-2">
             <label htmlFor="term" className="flex gap-2 items-center">
@@ -149,14 +153,19 @@ export default function ChooseAccounType() {
             <Link href={"/register"} className="text-sm text-blue-500">
               Back
             </Link>
-            <Link
-              href={"/register/verify"}
-              className="px-5 py-3 rounded bg-[#196EAF] text-white font-semibold"
+            <button
+              disabled={!password || !selectType ? true : false}
+              onClick={() => router.push("/register/verify")}
+              className={`${
+                !password || !selectType
+                  ? "text-[#196EAF] cursor-not-allowed"
+                  : "bg-[#196EAF] text-white cursor-pointer"
+              } px-5 py-3 rounded  font-semibold disabled border border-[#196EAF]`}
             >
               Proceed
-            </Link>
+            </button>
           </div>
-        </form>
+        </div>
         <div className="text-[14px] leading-[21px] text-center">
           <span>
             Already have an account?
