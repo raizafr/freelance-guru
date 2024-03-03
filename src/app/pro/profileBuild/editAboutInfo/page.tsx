@@ -1,15 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { CiCirclePlus } from "react-icons/ci";
-import { FaFilePdf, FaRegImages } from "react-icons/fa";
-import { ImEmbed2 } from "react-icons/im";
+import { IoCloseSharp, IoDocumentTextOutline } from "react-icons/io5";
 
 export default function EditAboutInfo() {
   const [iam, setIam] = useState<boolean>(true);
-  const [imageFeatureTeamsMember, setImageFeaturesTeamMember] =
-    useState<File | null>(null);
+  const [selectedImage, setSelectedImage] = useState<any>(null);
+  const [uploadDocument, setUploadDocument] = useState<string | null>("");
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setUploadDocument(file.name);
+    } else {
+      setUploadDocument("");
+    }
+  };
+
+  const handleDeleteFile = () => {
+    setUploadDocument(null);
+  };
+
+  const handleImageChange = (event: any) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader() as any;
+      reader.onloadend = () => {
+        setSelectedImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <section className="border rounded flex-1 flex-col">
@@ -20,16 +43,24 @@ export default function EditAboutInfo() {
       <div className="px-4">
         <div className="bg-[url('https://res.cloudinary.com/gurucom/image/upload/f_auto,q_auto,dpr_2/pimg/CoverImages/default_cover_image.jpeg')] flex flex-col justify-center items-center py-5 mt-5">
           <Image
-            src={"https://placehold.co/400x400.png"}
+            src={selectedImage || "/images/def_fl_128.avif"}
             alt="default"
             width={150}
             height={150}
             loading="lazy"
           />
           <div className="pt-2">
-            <button className="bg-gray-600 text-white px-3 py-1 rounded-md text-sm hover:scale-105 duration-200">
-              Change Photo
-            </button>
+            <label className="bg-gray-600 text-white px-3 py-1 rounded-md text-sm hover:scale-105 duration-200">
+              <span className="cursor-pointer hover:scale-105 duration-200">
+                Change Photo
+              </span>
+              <input
+                type="file"
+                className="hidden"
+                accept="image/*"
+                onClick={handleImageChange}
+              />
+            </label>
           </div>
         </div>
       </div>
@@ -48,51 +79,7 @@ export default function EditAboutInfo() {
               className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
             />
           </label>
-          <label className="font-[500] flex gap-3 items-center">
-            <div className="w-1/5 text-right">Website Link</div>
-            <input
-              type="text"
-              className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
-            />
-          </label>
-          <label className="font-[500] flex gap-3 items-center">
-            <div className="w-1/5 text-right">Professional Video Link</div>
-            <input
-              type="text"
-              className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
-            />
-          </label>
-          <label className="font-[500] flex gap-3 items-center">
-            <div className="w-1/5 text-right">Facebook Link</div>
-            <input
-              type="text"
-              className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
-            />
-          </label>
-          <label className="font-[500] flex gap-3 items-center">
-            <div className="w-1/5 text-right">Linkedin Link</div>
-            <input
-              type="text"
-              className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
-            />
-          </label>
-          <label className="font-[500] flex gap-3 items-center ">
-            <div className="w-1/5 text-right" />
-            <div className="flex-1">
-              <button className="w-fit bg-[#2777C6] text-white px-3 py-1.5 rounded hover:scale-105 duration-200">
-                Save
-              </button>
-            </div>
-          </label>
-        </form>
-      </div>
-      {/* end public indentity */}
-
-      {/* Overview */}
-      <div className="mt-3">
-        <h2 className="text-base border-b-2 mx-4 py-1">Overview</h2>
-        <form className="text-sm pt-3 px-5 space-y-2">
-          <div className="font-[500] flex gap-3 items-center ">
+          <div className="font-[500] flex gap-3 items-center pt-2">
             <div className="w-1/5 text-right">I am...</div>
             <div className="flex-1 flex items-center gap-3">
               <label htmlFor="" className="flex items-center gap-1">
@@ -246,35 +233,45 @@ export default function EditAboutInfo() {
           </div>
         </form>
       </div>
-      {/* end Overview */}
-      {/* Attach Files and Videos */}
+      {/* end public indentity */}
+
+      {/* Verify your address ( Upload your utility bill)  */}
       <div className="mt-3 pb-10">
         <h2 className="text-base border-b-2 mx-4 py-1">
-          Attach Files and Videos
+          Verify your address ( Upload your utility bill)
         </h2>
         <div className="pt-3 flex gap-5 px-5">
-          <div className="flex flex-col items-center">
-            <div className="text-blue-500 border rounded-full p-4 w-fit relative">
-              <FaRegImages className="scale-150" />
+          <label
+            htmlFor="uploadDocument"
+            className="flex flex-col items-center cursor-pointer"
+          >
+            <div className="text-blue-500 border rounded-full p-4 w-fit relative hover:scale-105 duration-200">
+              <IoDocumentTextOutline className="scale-150" />
               <CiCirclePlus className="absolute top-0 right-0 scale-75" />
             </div>
-            <div className="text-xs text-gray-400 pt-1">Upload Images</div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="text-blue-500 border rounded-full p-4 w-fit relative">
-              <FaFilePdf className="scale-150" />
-              <CiCirclePlus className="absolute top-0 right-0 scale-75" />
-            </div>
-            <div className="text-xs text-gray-400 pt-1">Upload Images</div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="text-blue-500 border rounded-full p-4 w-fit relative">
-              <ImEmbed2 className="scale-150" />
-              <CiCirclePlus className="absolute top-0 right-0 scale-75" />
-            </div>
-            <div className="text-xs text-gray-400 pt-1">Upload Images</div>
-          </div>
+            <div className="text-xs text-gray-400 pt-1">Upload Document</div>
+            <input
+              type="file"
+              name="uploadDocument"
+              id="uploadDocument"
+              className="hidden"
+              onChange={handleFileChange}
+            />
+          </label>
         </div>
+        {uploadDocument && (
+          <div className="px-5 mt-3">
+            <div className="text-xs flex items-center gap-1 bg-gray-300 rounded-md px-2 py-1 w-fit">
+              <div>{uploadDocument}</div>
+              <div
+                onClick={handleDeleteFile}
+                className="bg-red-600 text-white rounded-full w-fit p-0.5 hover:scale-105 duration-200 cursor-pointer"
+              >
+                <IoCloseSharp />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
       {/* End Attach Files and Videos */}
     </section>
