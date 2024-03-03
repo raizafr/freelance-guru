@@ -67,11 +67,11 @@ export default function EditAboutInfo() {
       {/* end photo */}
 
       {/* public indentity */}
-      <div className="mt-3">
+      <div className="mt-3 ">
         <h2 className="text-base border-b-2 mx-4 py-1">Public Indentity</h2>
         <form className="text-sm pt-3 px-5 space-y-2">
-          <label className="font-[500] flex gap-3 items-center ">
-            <div className="w-1/5 text-right">
+          <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+            <div className="sm:w-1/5 sm:text-right">
               Screen Name <span className="text-red-500">*</span>
             </div>
             <input
@@ -79,8 +79,10 @@ export default function EditAboutInfo() {
               className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
             />
           </label>
-          <div className="font-[500] flex gap-3 items-center pt-2">
-            <div className="w-1/5 text-right">I am...</div>
+          <div className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center pt-2">
+            <div className="sm:w-1/5 sm:text-right">
+              I am... <span className="text-red-500">*</span>
+            </div>
             <div className="flex-1 flex items-center gap-3">
               <label htmlFor="" className="flex items-center gap-1">
                 <input type="radio" name="iam" onChange={() => setIam(true)} />
@@ -94,8 +96,8 @@ export default function EditAboutInfo() {
           </div>
           {iam ? (
             <div className="space-y-5 pt-4">
-              <label className="font-[500] flex gap-3 items-start">
-                <div className="w-1/5 text-right">Tagline</div>
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">Tagline</div>
                 <div className="flex-1">
                   <textarea
                     name=""
@@ -110,8 +112,8 @@ export default function EditAboutInfo() {
                   </div>
                 </div>
               </label>
-              <label className="font-[500] flex gap-3 items-start">
-                <div className="w-1/5 text-right">
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">
                   Bio <span className="text-red-500">*</span>
                 </div>
                 <div className="flex-1">
@@ -128,8 +130,8 @@ export default function EditAboutInfo() {
                   </div>
                 </div>
               </label>
-              <label className="font-[500] flex gap-3 items-start">
-                <div className="w-1/5 text-right">Work Terms</div>
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">Work Terms</div>
                 <div className="flex-1">
                   <textarea
                     name=""
@@ -147,8 +149,8 @@ export default function EditAboutInfo() {
             </div>
           ) : (
             <div className="space-y-5 pt-4">
-              <label className="font-[500] flex gap-3 items-start">
-                <div className="w-1/5 text-right">Tagline</div>
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">Tagline</div>
                 <div className="flex-1">
                   <textarea
                     name=""
@@ -163,8 +165,8 @@ export default function EditAboutInfo() {
                   </div>
                 </div>
               </label>
-              <label className="font-[500] flex gap-3 items-start">
-                <div className="w-1/5 text-right">
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">
                   Company History <span className="text-red-500">*</span>
                 </div>
                 <div className="flex-1">
@@ -181,15 +183,17 @@ export default function EditAboutInfo() {
                   </div>
                 </div>
               </label>
-              <label className="font-[500] flex gap-3 items-center ">
-                <div className="w-1/5 text-right">Operating since</div>
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">Operating since</div>
                 <input
                   type="text"
                   className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
                 />
               </label>
-              <label className="font-[500] flex gap-3 items-center ">
-                <div className="w-1/5 text-right">Featured Team Members</div>
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">
+                  Featured Team Members
+                </div>
                 <div>
                   <Image
                     src={"https://placehold.co/400x400.png"}
@@ -205,8 +209,8 @@ export default function EditAboutInfo() {
                   />
                 </div>
               </label>
-              <label className="font-[500] flex gap-3 items-start">
-                <div className="w-1/5 text-right">Work Terms</div>
+              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
+                <div className="sm:w-1/5 sm:text-right">Work Terms</div>
                 <div className="flex-1">
                   <textarea
                     name=""
@@ -223,7 +227,7 @@ export default function EditAboutInfo() {
               </label>
             </div>
           )}
-          <div className="font-[500] flex gap-3 items-center ">
+          <div className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
             <div className="w-1/5 text-right" />
             <div className="flex-1">
               <button className="w-fit bg-[#2777C6] text-white px-3 py-1.5 rounded hover:scale-105 duration-200">

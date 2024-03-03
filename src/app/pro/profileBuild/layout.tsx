@@ -1,4 +1,3 @@
-import NavDashboard from "@/components/nav/NavDashboard";
 import NavProfileBuild from "@/components/nav/NavProfileBuild";
 import NavSideProfileBuild from "@/components/nav/NavSideProfileBuild";
 import type { Metadata } from "next";

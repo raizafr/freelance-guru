@@ -30,7 +30,7 @@ export default function NavDashboard() {
           Jobs
         </Link>
         <Link
-          href={"/pro/payments"}
+          href={"/pro/payments/transfer-methods"}
           className={`px-4 py-2 ${
             pathName.startsWith("/pro/payments") ? "bg-white rounded-t-md" : ""
           }`}
