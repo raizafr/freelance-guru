@@ -77,7 +77,7 @@ export default function Verify() {
           </div>
         </div>
       </div>
-      <div className="flex-1 pt-8 px-10 md:px-5 lg:px-20 space-y-5 pb-28 justify-center items-center ">
+      <div className="flex-1 pt-8 px-3 md:px-5 lg:px-20 space-y-5 pb-28 justify-center items-center ">
         <h1 className="text-[32px] leading-[46px] text-center text-blue-500">
           Sign Up
         </h1>
