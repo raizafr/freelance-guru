@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { FaCheck } from "react-icons/fa";
 
 export default function ChooseAccounType() {
-  const [selectType, setSelectType] = useState<string>("freelancer");
   const [password, setPassword] = useState<string>("");
   const router = useRouter();
   return (
@@ -55,12 +53,12 @@ export default function ChooseAccounType() {
         <h1 className="text-[32px] leading-[46px] text-center text-blue-500">
           Sign Up
         </h1>
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <div className="flex-1 border-b" />
           <div className="text-sm">Select an account type</div>
           <div className="flex-1 border-b" />
-        </div>
-        <div className="flex gap-5">
+        </div> */}
+        {/* <div className="flex gap-5">
           <button
             onClick={() => setSelectType("freelancer")}
             className={`flex-1 flex flex-col items-center justify-center gap-2 border-2 py-3 relative ${
@@ -86,7 +84,7 @@ export default function ChooseAccounType() {
               <FaCheck />
             </div>
           </button>
-        </div>
+        </div> */}
         <div className="flex items-center gap-2">
           <div className="flex-1 border-b" />
           <div className="text-sm">Set password</div>
@@ -129,10 +127,10 @@ export default function ChooseAccounType() {
               Back
             </Link>
             <button
-              disabled={!password || !selectType ? true : false}
-              onClick={() => router.push("/register/verify")}
+              disabled={!password ? true : false}
+              onClick={() => router.push("/register/pro")}
               className={`${
-                !password || !selectType
+                !password 
                   ? "text-[#196EAF] cursor-not-allowed"
                   : "bg-[#196EAF] text-white cursor-pointer"
               } px-5 py-3 rounded  font-semibold disabled border border-[#196EAF]`}
