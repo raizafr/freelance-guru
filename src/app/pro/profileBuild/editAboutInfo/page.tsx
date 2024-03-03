@@ -3,12 +3,15 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import { CiCirclePlus } from "react-icons/ci";
+import { FaRegAddressBook } from "react-icons/fa";
 import { IoCloseSharp, IoDocumentTextOutline } from "react-icons/io5";
+import { MdPermIdentity } from "react-icons/md";
 
 export default function EditAboutInfo() {
   const [iam, setIam] = useState<boolean>(true);
   const [selectedImage, setSelectedImage] = useState<any>(null);
   const [uploadDocument, setUploadDocument] = useState<string | null>("");
+  const [uploadDocument2, setUploadDocument2] = useState<string | null>("");
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -21,6 +24,20 @@ export default function EditAboutInfo() {
 
   const handleDeleteFile = () => {
     setUploadDocument(null);
+  };
+  console.log({ uploadDocument, uploadDocument2 });
+
+  const handleFileChange2 = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setUploadDocument2(file.name);
+    } else {
+      setUploadDocument2("");
+    }
+  };
+
+  const handleDeleteFile2 = () => {
+    setUploadDocument2(null);
   };
 
   const handleImageChange = (event: any) => {
@@ -104,7 +121,6 @@ export default function EditAboutInfo() {
                     id=""
                     cols={30}
                     rows={3}
-                    placeholder="Write a tagline that conveys your mission, your promise, and you brand"
                     className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
                   ></textarea>
                   <div className="text-[11px] text-gray-500">
@@ -130,22 +146,6 @@ export default function EditAboutInfo() {
                   </div>
                 </div>
               </label>
-              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
-                <div className="sm:w-1/5 sm:text-right">Work Terms</div>
-                <div className="flex-1">
-                  <textarea
-                    name=""
-                    id=""
-                    cols={30}
-                    rows={3}
-                    placeholder="Hours of operation, payment terms, and preferred communication style, etc."
-                    className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
-                  ></textarea>
-                  <div className="text-[11px] text-gray-500">
-                    2000 characters left
-                  </div>
-                </div>
-              </label>
             </div>
           ) : (
             <div className="space-y-5 pt-4">
@@ -157,7 +157,6 @@ export default function EditAboutInfo() {
                     id=""
                     cols={30}
                     rows={3}
-                    placeholder="Write a tagline that conveys your mission, your promise, and you brand"
                     className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
                   ></textarea>
                   <div className="text-[11px] text-gray-500">
@@ -209,26 +208,93 @@ export default function EditAboutInfo() {
                   />
                 </div>
               </label>
-              <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
-                <div className="sm:w-1/5 sm:text-right">Work Terms</div>
-                <div className="flex-1">
-                  <textarea
-                    name=""
-                    id=""
-                    cols={30}
-                    rows={3}
-                    placeholder="Hours of operation, payment terms, and preferred communication style, etc."
-                    className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
-                  ></textarea>
-                  <div className="text-[11px] text-gray-500">
-                    2000 characters left
-                  </div>
-                </div>
-              </label>
             </div>
           )}
-          <div className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
-            <div className="w-1/5 text-right" />
+          <label className="font-[500] flex flex-col sm:flex-row sm:gap-3 sm:items-center pt-4">
+            <div className="sm:w-1/5 sm:text-right">
+              <span>Verify Your Identity</span>
+            </div>
+            <div className="flex-1">
+              <div className="pt-3 flex flex-col items-start">
+                <label
+                  htmlFor="uploadDocument"
+                  className="flex flex-col items-left cursor-pointer"
+                >
+                  <div className="text-blue-500 border rounded-full p-4 w-fit relative hover:scale-105 duration-200">
+                    <MdPermIdentity className="scale-150" />
+                    <CiCirclePlus className="absolute top-0 right-0 scale-75" />
+                  </div>
+                  <div className="text-xs text-gray-400 pt-1">
+                    Upload ID: International passport, Driver’s license, or
+                    National Identity Card.
+                  </div>
+                  <input
+                    type="file"
+                    name="uploadDocument"
+                    id="uploadDocument"
+                    className="hidden"
+                    onChange={handleFileChange}
+                  />
+                </label>
+                {uploadDocument && (
+                  <div className="mt-3">
+                    <div className="text-xs flex items-center gap-1 bg-gray-300 rounded-md px-2 py-1 w-fit">
+                      <div>{uploadDocument}</div>
+                      <div
+                        onClick={handleDeleteFile}
+                        className="bg-red-600 text-white rounded-full w-fit p-0.5 hover:scale-105 duration-200 cursor-pointer"
+                      >
+                        <IoCloseSharp />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </label>
+
+          <label className="font-[500] flex flex-col sm:flex-row sm:gap-3 sm:items-center pt-4">
+            <div className="sm:w-1/5 sm:text-right">Verify Your Address</div>
+            <div className="flex-1">
+              <div className="pt-3 flex flex-col items-start">
+                <label
+                  htmlFor="uploadDocument2"
+                  className="flex flex-col items-start cursor-pointer"
+                >
+                  <div className="text-blue-500 border rounded-full p-4 w-fit relative hover:scale-105 duration-200">
+                    <FaRegAddressBook className="scale-150" />
+                    <CiCirclePlus className="absolute top-0 right-0 scale-75" />
+                  </div>
+                  <div className="text-xs text-gray-400 pt-1">
+                    Upload proof of address: Utility bill.
+                  </div>
+                  <input
+                    type="file"
+                    name="uploadDocument2"
+                    id="uploadDocument2"
+                    className="hidden"
+                    onChange={handleFileChange2}
+                  />
+                </label>
+                {uploadDocument2 && (
+                  <div className="mt-3">
+                    <div className="text-xs flex items-center gap-1 bg-gray-300 rounded-md px-2 py-1 w-fit">
+                      <div>{uploadDocument2}</div>
+                      <div
+                        onClick={handleDeleteFile2}
+                        className="bg-red-600 text-white rounded-full w-fit p-0.5 hover:scale-105 duration-200 cursor-pointer"
+                      >
+                        <IoCloseSharp />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </label>
+
+          <div className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center pb-10 pt-5">
+            <div className="w-1/5" />
             <div className="flex-1">
               <button className="w-fit bg-[#2777C6] text-white px-3 py-1.5 rounded hover:scale-105 duration-200">
                 Save
@@ -240,7 +306,7 @@ export default function EditAboutInfo() {
       {/* end public indentity */}
 
       {/* Verify your address ( Upload your utility bill)  */}
-      <div className="mt-3 pb-10">
+      {/* <div className="mt-3 pb-10">
         <h2 className="text-base border-b-2 mx-4 py-1">
           Verify your address ( Upload your utility bill)
         </h2>
@@ -276,7 +342,7 @@ export default function EditAboutInfo() {
             </div>
           </div>
         )}
-      </div>
+      </div> */}
       {/* End Attach Files and Videos */}
     </section>
   );
