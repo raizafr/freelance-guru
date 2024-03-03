@@ -58,7 +58,7 @@ export default function Register() {
           <input
             type="text"
             className="focus:border-blue-400 border focus:outline-none w-full px-5 py-2.5"
-            placeholder="Email or Username"
+            placeholder="Full Name"
             onChange={(e) => setName(e.target.value)}
           />
           <input

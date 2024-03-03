@@ -42,7 +42,7 @@ export default function Pro() {
             />
             <label htmlFor="image">
               <div className="bg-[#DDDDDD] px-6 py-1 w-fit rounded-md text-sm">
-                Upload Foto
+                Upload Photo
               </div>
               <input
                 onChange={handleImageChange}
@@ -73,7 +73,7 @@ export default function Pro() {
       <div className="border rounded flex-1 flex-col w-full pb-5">
         <div className="py-2 border-b text-xs bg-[#FAFAFA] px-6">
           <h1 className="text-base font-semibold">
-            Enter your Contact Information
+            Enter Your Contact Information
           </h1>
         </div>
         <div className="py-5 flex-1 space-y-3 px-5">

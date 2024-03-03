@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
 export default function ChooseAccounType() {
-  const [selectType, setSelectType] = useState<string>("");
+  const [selectType, setSelectType] = useState<string>("freelancer");
   const [password, setPassword] = useState<string>("");
   const router = useRouter();
   return (
@@ -61,31 +61,6 @@ export default function ChooseAccounType() {
           <div className="flex-1 border-b" />
         </div>
         <div className="flex gap-5">
-          <button
-            onClick={() => setSelectType("employer")}
-            className={`flex-1 flex flex-col items-center justify-center gap-2 border-2 py-3 relative ${
-              selectType === "employer" ? "border-blue-500" : ""
-            }`}
-          >
-            <Image
-              src={"/svg/Employer.svg"}
-              alt="employer"
-              width={50}
-              height={0}
-              loading="lazy"
-            />
-            <div className="font-semibold text-center">Employer</div>
-            <div className="text-xs text-center">(I want to Hire)</div>
-            <div
-              className={`border p-1 absolute top-0 right-0  ${
-                selectType === "employer"
-                  ? "text-blue-500 border-blue-500"
-                  : "text-transparent"
-              }`}
-            >
-              <FaCheck />
-            </div>
-          </button>
           <button
             onClick={() => setSelectType("freelancer")}
             className={`flex-1 flex flex-col items-center justify-center gap-2 border-2 py-3 relative ${
