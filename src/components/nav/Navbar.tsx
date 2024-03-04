@@ -208,7 +208,7 @@ export default function Navbar() {
         </nav>
       </div>
       <nav className="navbar bg-base-100 lg:hidden container mx-auto px-3">
-        <div className="navbar-start">
+        <div className={`navbar-start ${pathName==="/login" || pathName.startsWith('/register')?'hidden':''}`}>
           <button className="" onClick={() => setShowSidebar(!showSidebar)}>
             <GiHamburgerMenu className="scale-150" />
           </button>
@@ -224,7 +224,7 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <div className="navbar-end">
+        <div className={`navbar-end ${pathName==="/login" || pathName.startsWith('/register')?'hidden':''}`}>
           <button className="px-3 py-2 rounded bg-[#196EAF] text-white font-semibold text-sm ">
             Post a Job
           </button>

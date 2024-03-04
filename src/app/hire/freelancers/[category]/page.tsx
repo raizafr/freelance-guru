@@ -1,40 +1,27 @@
 "use client";
 
-import CardFIndTopFreelance from "@/components/card/CardFIndTopFreelance";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import SectionTopwithSlug from "./SectionTopwithSlug";
 import SectionTopUserFrelance from "./SectionTopUserFrelance";
+import SectionTopwithCategory from "./SectionTopwithCategory";
 
-export default function Freelancer({ params }: { params: { slug: string } }) {
+export default function Freelancer({ params }: { params: { category: string } }) {
   const [titleHero, setTitleHero] = useState<string>("");
   useEffect(() => {
-    if (params.slug == "programming-development") {
-      setTitleHero("Programmer & Developer");
+    if (params.category == "interior-design-architecture") {
+      setTitleHero("Interior design/Architecture");
     }
-    if (params.slug == "writing-translation") {
-      setTitleHero("Writers & Translators");
+    if (params.category == "logistic-and-supply-chain") {
+      setTitleHero("Logistics and Supply-chain");
     }
-    if (params.slug == "design-art") {
-      setTitleHero("Designers & Artists");
+    if (params.category == "human-resource") {
+      setTitleHero("Human Resources");
     }
-    if (params.slug == "admininstrative-secretarial") {
-      setTitleHero("Admin & Secretaries");
+    if (params.category == "sales-marketing") {
+      setTitleHero("Sales marketing");
     }
-    if (params.slug == "sales-marketing") {
-      setTitleHero("Sales & Marketing Gurus");
-    }
-    if (params.slug == "engineering-architecture") {
-      setTitleHero("Engineers & Architects");
-    }
-    if (params.slug == "business-finance") {
-      setTitleHero("Business & Finance Gurus");
-    }
-    if (params.slug == "education-training") {
-      setTitleHero("Educators & Trainers");
-    }
-    if (params.slug == "legal") {
-      setTitleHero("Legal Experts");
+    if (params.category == "adminisitrative-and-operation") {
+      setTitleHero("Administrative & Operations");
     }
   }, [params]);
   return (
@@ -101,7 +88,7 @@ export default function Freelancer({ params }: { params: { slug: string } }) {
           </div>
         </section>
       </div>
-      <SectionTopwithSlug title={titleHero} />
+      <SectionTopwithCategory title={titleHero} />
       <SectionTopUserFrelance title={titleHero} />
     </>
   );

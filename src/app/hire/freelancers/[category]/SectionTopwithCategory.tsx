@@ -1,8 +1,8 @@
 import CardFIndTopFreelance from "@/components/card/CardFIndTopFreelance";
 import { findTopFreelanceCategory } from "@/lib/constant";
 
-export default function SectionTopwithSlug({ title }: { title: string }) {
- console.log(findTopFreelanceCategory(title)) 
+export default function SectionTopwithCategory({ title }: { title: string }) {
+
   return (
     <section className="container mx-auto lg:px-12 px-3 md:px-5 py-16">
       <h1 className="text-[35px] leading-[53px] font-[500] text-center">

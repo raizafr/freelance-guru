@@ -36,18 +36,22 @@ export default function CardTopUsersFreelance({
           </p>
         </div>
         <div className="flex justify-center">
-          <p className="text-[#707070] flex text-wrap items-center">
-            <FaLocationDot />
+          <p className="text-[#707070] flex text-wrap items-start">
+            <div className="mt-1">
+              <FaLocationDot />
+            </div>
             {address}
           </p>
         </div>
         <div className="flex justify-center items-center gap-2">
+          {pay && 
           <div className="text-[16px] font-[500] leading-[24px] text-[#333] flex items-center gap-1">
             <BiSolidDollarCircle />
             <div>
               <span className="font-semibold">{pay}/</span> <span>yr</span>
             </div>
           </div>
+          }
           <div>·</div>
           <div className="w-fit flex items-center text-[#2777c6] gap-1 border border-[#2777c6] px-2 py-0.5 rounded-md text-sm">
             <BiSolidLike />

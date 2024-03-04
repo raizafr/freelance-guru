@@ -1,357 +1,164 @@
 export const dummyFreelance = (category: string) => {
   switch (category) {
-    case "Programmer & Developer":
+    case "Administrative & Operations":
       return [
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Scopic#",
+            "https://res.cloudinary.com/gurucom/image/upload/f_auto,w_128,h_128,dpr_2/pimg/1/891/1891022/photo_636001735363451538_guruImgLarge_1839478a-46a7-4e7d-b510-fd222d9979f0.jpg",
+          address: "Gurgaon, Haryana, India",
+          pay: "30,236",
+          name: "Anu Mittal",
           tag: [
-            "PHP",
-            "Responsive Design",
-            "JavaScript",
-            "Web Development",
-            "CSS",
+            "File Management",
+            "HR Management",
+            "HRM",
+            "Management",
+            "Office Assistant",
           ],
         },
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-      ];
-    case "Writers & Translators":
-      return [
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
+            "/images/20170805_093502_636375411570945345_guruImgLarge_2ebdefde-bbe7-46c8-8a43-de8febdc8532.avif",
+          address: "Chelsea, OK, USA",
+          pay: "Past Earnings",
+          name: "Ashley Boswell",
           tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
+            "Medical",
+            "Microsoft",
+            "Bookkeeping",
+            "Insurance Consulting",
+            "Marketing",
           ],
         },
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-      ];
-    case "Designers & Artists":
-      return [
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
+            "/images/Arun_637227661339530961_guruImgLarge_3429529e-2cf6-46e8-b66a-245421803c8e.avif",
+          address: "Mumbai, Maharashtra, India",
+          pay: "Past Earnings",
+          name: "Arun Kumar (Certified GTD Trainer)",
           tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
+            "Business Analysis",
+            "Business Communications",
+            "Business Consultant",
           ],
         },
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
+            "https://res.cloudinary.com/gurucom/image/upload/f_auto,w_128,h_128,dpr_2/v1679495317/pimg/FreelancerFiles/4/745/4745079/etezjdinjepkxqwpurpt.jpg",
+          address: "Havant, England, United Kingdom",
+          pay: "1,768",
+          name: "Martin Jackson",
+          tag: [
+            "Business Analysis",
+            "Business Consulting",
+            "Business Development",
+            "Business Management",
+          ],
         },
       ];
-    case "Admin & Secretaries":
+    case "Interior design/Architecture":
+      return [
+        {
+          imageUrl: "/images/pzxb4pejakj8u0rwywe7.avif",
+          address: "Mexico, Nuevo Leon, Mexico",
+          name: "Yvone Castillo",
+          tag: ["3D Design", "3D Modeling", "3D Rendering", "Building Design"],
+        },
+        {
+          imageUrl:
+            "https://res.cloudinary.com/gurucom/image/upload/f_auto,w_128,h_128,dpr_2/pimg/2/184/2184858/PHOTO%20ALI_ABIDI_636358240520549748_guruImgLarge_961dcf55-1fa2-4a52-8007-108e04a90c3c.jpg",
+          address: "Bou-Salem, Jendouba, Tunisia",
+          pay: "2,962",
+          name: "ALI ABIDI",
+          tag: ["3D Design", "3D Modeling", "3D Rendering", "Building Design"],
+        },
+      ];
+    case "Sales marketing":
       return [
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
+            "https://res.cloudinary.com/gurucom/image/upload/f_auto,w_128,h_128,dpr_2/pimg/3/564/3564755/fullsizeoutput_677_637407362734441747_guruImgExtraLarge7220878c-e48f-45df-83c5-32b306895068.jpeg",
+          address: "Carson, CA, USA",
+          pay: "134,320",
+          name: "Nicole Lunan",
           tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
+            "Accounting",
+            "Customer Service",
+            "Lead Generation",
+            "Marketing",
+          ],
+        },
+        {
+          imageUrl: "/images/b7qjyajgsx8qxb89pt1h.avif",
+          address: "newport coast, CA, USA",
+          pay: "20,600",
+          name: "Josclyn Virrey",
+          tag: [
+            "Affiliate Marketing",
+            "Business Proposal Writing",
+            "Sales and Marketing",
           ],
         },
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
+            "https://res.cloudinary.com/gurucom/image/upload/f_auto,w_128,h_128,dpr_2/v1641725175/pimg/FreelancerFiles/4/094/4094905/v4thah8g6nymt8adedcu.jpg",
+          address: "Dhule, Maharashtra, India",
+          pay: "17,050",
+          name: "Aishwarya Shinde 1",
+          tag: ["Content Marketing", "Digital Marketing", "Google Ads"],
         },
       ];
-    case "Sales & Marketing Gurus":
+    case "Human Resources":
       return [
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
-          tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
-          ],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-      ];
-    case "Engineers & Architects":
-      return [
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
-          tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
-          ],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-      ];
+            "/images/headshotlulu_635338001201004201_guruImgLarge_dd61030f-d940-43be-870e-e3c1366c52f1.avif",
+          address: "katy, TX, USA",
 
-    case "Business & Finance Gurus":
-      return [
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
-          tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
-          ],
+          name: "Leo Valk",
+          tag: ["Benefits", "Consultant", "Management", "WordPress"],
         },
         {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
+          imageUrl: "/images/xejsruhf95ekwv1cmlib.avif",
+          address: "Lahore, Punjab, Pakistan",
+          name: "M. Azam Khan",
+          verified: "ID Verified",
+          tag: ["GitHub", "LinkedIn", "Onboarding", "Skype"],
         },
         {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
+          imageUrl: "/images/ob29qrbp3sx8zkhquwpl.avif",
+          address: "Indore, Madhya Pradesh, India",
+          name: "PeopleCrop",
+          tag: ["Benefits Design", "IT Recruitment", "Onboarding", "Payroll"],
         },
       ];
-    case "Educators & Trainers":
+    case "Logistics and Supply-chain":
       return [
         {
+          imageUrl: "/images/jpv8wttyewfn7lgbjjhk.avif",
+          address: "Ajman, Ajman, United Arab Emirates",
+          name: "Shweta Kulkarni1",
+          tag: ["Drafting", "Construction", "Training", "Rate Contracts"],
+        },
+        {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
+            "/images/BoxLogicSep201915_637097624163401196_guruImgLarge_d85c9113-0e8d-48f7-b3e0-25e47ae48e19.avif",
+          address: "Southampton, England, United Kingdom",
+          name: "Nishit Nisudan",
           tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
+            "Logistics",
+            "Logistics Consulting",
+            "Logistics Design",
+            "Consultant",
           ],
         },
         {
           imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-      ];
-    case "Legal Experts":
-      return [
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/314/314056/Scopic%20logo%20with%20extra%20fields_637402955178368445_guruImgExtraLarge048c3f15-027f-44fc-8b92-6bf8ee3da2d2.jpg",
-          address: "Rutland, Massachusetts, Unitad States",
-          pay: "763,025",
-          name: "Top Guru Assistants",
-          tag: [
-            "Article WritingBlog",
-            " WritingContent",
-            "WritingCopywritingResearch",
-          ],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/0/538/538436/Screen%20Shot%202020-05-25%20at%2018.24.28_637260188868286030_guruImgLarge_781464e4-8a61-4234-bdfe-b27beac7c6ca.png",
-          address: " Kfar Saba, Tel Aviv, Israel",
-          pay: "763,025",
-          name: "NIX-agency",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/pimg/2/178/2178498/Scarlet%20Star_636363191916843130_guruImgLarge_49d91f6d-2e51-46dc-ba34-cec17ab65eeb.jpg",
-          address: "Dandong, Liaoning, China",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["PHP", "Python", "Node.js", "Ruby on Rails", "ReactJS"],
-        },
-        {
-          imageUrl:
-            "https://res.cloudinary.com/gurucom/image/upload/w_90,h_90,f_auto,dpr_2/v1677847219/pimg/FreelancerFiles/3/587/3587209/uzmse9bt82strvxtk0uh.jpg",
-          address: "Noida, Uttar Pradesh, India",
-          pay: "763,025",
-          name: "YanBin Pang",
-          tag: ["SSL", "Checkpoint", "SonicWall", "Cisco ASA", "Cisco PIC"],
+            "/images/Linkedin Photo_636831174243587906_guruImgLarge_eead0e25-f58d-4e4f-9b7f-1855190e8554.avif",
+          address: "Ronkonkoma, NY, USA",
+          name: "Jonathan Riker",
+          pay: "150",
+          tag: ["Consultant", "ERP", "Programming", "Oracle Hyperion"],
         },
       ];
   }
