@@ -20,6 +20,7 @@ export default function SectionTopUserFrelance({ title }: { title: string }) {
             pay={data.pay}
             name={data.name}
             tag={data.tag}
+            id={data.id}
           />
         ))}
       </div>

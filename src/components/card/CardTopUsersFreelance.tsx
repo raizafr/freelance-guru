@@ -1,7 +1,10 @@
+
+
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
 import { BiSolidDollarCircle } from "react-icons/bi";
 import { BiSolidLike } from "react-icons/bi";
+import Link from "next/link";
 
 interface CardTopUsersFreelanceType {
   imageUrl: string;
@@ -9,6 +12,7 @@ interface CardTopUsersFreelanceType {
   address: string;
   pay: string;
   tag: string[];
+  id:string;
 }
 
 export default function CardTopUsersFreelance({
@@ -17,6 +21,7 @@ export default function CardTopUsersFreelance({
   pay,
   tag,
   name,
+  id,
 }: CardTopUsersFreelanceType) {
   return (
     <div className="flex flex-col items-center justify-center shadow-2xl rounded-md space-y-3 px-5 pb-10 hover:scale-105 duration-200">
@@ -69,9 +74,9 @@ export default function CardTopUsersFreelance({
           ))}
         </div>
         <div className="flex justify-center pt-5">
-          <button className="px-5 py-2.5 rounded  text-[#2777C6] border hover:text-white hover:bg-[#2777C6] border-[#2777C6] font-semibold w-fit hover:scale-105 duration-200 ">
+          <Link href={`/hire/freelancers/detail/${id}` } className="px-5 py-2.5 rounded  text-[#2777C6] border hover:text-white hover:bg-[#2777C6] border-[#2777C6] font-semibold w-fit hover:scale-105 duration-200 ">
             Get a Quote
-          </button>
+          </Link>
         </div>
       </div>
     </div>
