@@ -146,7 +146,7 @@ export default function Pro() {
       {/* end Enter your Contact Information */}
       <div className="w-full mb-10 mt-5 ">
         <button
-          onClick={() => router.push("/pro/profileBuild/editAboutInfo")}
+          onClick={() => router.push("/register/completeYourProfile")}
           className="px-5 py-2 rounded bg-[#196EAF] text-white font-semibold hover:scale-105 duration-200"
         >
           Save
