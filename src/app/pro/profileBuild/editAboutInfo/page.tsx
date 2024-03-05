@@ -25,7 +25,7 @@ export default function EditAboutInfo() {
   const handleDeleteFile = () => {
     setUploadDocument(null);
   };
-  console.log({ uploadDocument, uploadDocument2 });
+
 
   const handleFileChange2 = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
