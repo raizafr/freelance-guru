@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BiMessageDots } from "react-icons/bi";
+import { FaUserPen } from "react-icons/fa6";
+import { MdAddBox, MdCardMembership, MdOutlineVerified } from "react-icons/md";
 
 export default function Dashboard() {
   return (
@@ -36,7 +37,7 @@ export default function Dashboard() {
           <div className="py-5 border-b text-xs space-y-3">
             <div className="flex items-center justify-between px-4">
               <div className="flex items-center gap-2">
-                <BiMessageDots className="scale-150" />
+                <MdOutlineVerified className="scale-150" />
                 <span>Not Verified Yet</span>
               </div>
               <Link href={"#"} className="text-[#2777C6] hover:underline">
@@ -45,7 +46,7 @@ export default function Dashboard() {
             </div>
             <div className="flex items-center justify-between px-4">
               <div className="flex items-center gap-2">
-                <BiMessageDots className="scale-150" />
+                <MdCardMembership className="scale-150" />
                 <span>Basic Member</span>
               </div>
               <Link href={"#"} className="text-[#2777C6] hover:underline">
@@ -56,7 +57,7 @@ export default function Dashboard() {
           <div className="py-5 border-b text-xs space-y-3">
             <div className="px-4">
               <div className="flex items-center gap-2">
-                <BiMessageDots className="scale-150" />
+                <FaUserPen className="scale-150" />
                 <Link href={"/pro/profileBuild/editAboutInfo"} className="text-[#2777C6] hover:underline">
                   Edit Profile
                 </Link>
@@ -64,17 +65,9 @@ export default function Dashboard() {
             </div>
             <div className="px-4">
               <div className="flex items-center gap-2">
-                <BiMessageDots className="scale-150" />
-                <Link href={"#"} className="text-[#2777C6] hover:underline">
-                  Link Website
-                </Link>
-              </div>
-            </div>
-            <div className="px-4">
-              <div className="flex items-center gap-2">
-                <BiMessageDots className="scale-150" />
-                <Link href={"#"} className="text-[#2777C6] hover:underline">
-                  Add Video
+                <MdAddBox className="scale-150 -ml-0.5" />
+                <Link href={"/pro/profileBuild/addServiceorDedicatedResource"} className="ml-0.5 text-[#2777C6] hover:underline">
+                  Add a Service
                 </Link>
               </div>
             </div>
