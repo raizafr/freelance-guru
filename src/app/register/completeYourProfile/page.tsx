@@ -307,11 +307,7 @@ export default function CompleteYourProfile() {
               <div className="w-1/5" />
               <div className="flex-1">
                 <button
-                  onClick={() =>
-                    router.push(
-                      "/pro/profileBuild/addServiceorDedicatedResource"
-                    )
-                  }
+                  onClick={() => router.push("/register/addService")}
                   className="w-fit bg-[#2777C6] text-white px-3 py-1.5 rounded hover:scale-105 duration-200"
                 >
                   Save
