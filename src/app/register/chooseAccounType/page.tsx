@@ -69,24 +69,13 @@ export default function ChooseAccounType() {
             <label htmlFor="term" className="flex gap-2 items-center">
               <input type="checkbox" className="scale-110" id="term" />
               <span className="text-xs">
-                I agree to the{" "}
-                <Link href={"#"} className="text-[#4FBFA3]">
-                  Privacy Policy
-                </Link>
-                ,{" "}
-                <Link href={"#"} className="text-[#4FBFA3]">
-                  Terms of Service
-                </Link>{" "}
-                and{" "}
-                <Link href={"#"} className="text-[#4FBFA3]">
-                  IP Policy.
-                </Link>
+                I agree to the Privacy Policy, Terms of Service and IP Policy.
               </span>
             </label>
             <label htmlFor="send" className="flex gap-2 items-center">
               <input type="checkbox" className="scale-110" id="send" />
               <span className="text-xs">
-                Send me useful emails to help me get the most out of Guru.com
+                Send me useful emails to help me get the most out of Freelancerhub.org
               </span>
             </label>
           </div>

@@ -6,7 +6,7 @@ export default function SectionItsEasy() {
   return (
     <section className="container mx-auto lg:px-12 px-3 md:px-5 py-16">
       <h1 className="text-[35px] leading-[53px] font-[500] text-center text-[#094063]">
-        It{"'"}s Easy to Get Work Done on Guru
+        It{"'"}s Easy to Get Work Done on Freelancer Hub
       </h1>
       <div className="flex justify-center pt-2">
         <div className="w-20 h-0.5 bg-[#4FBFA3] text-center" />

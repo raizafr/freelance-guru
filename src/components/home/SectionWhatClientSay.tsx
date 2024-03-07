@@ -14,11 +14,11 @@ export default function SectionWhatClientSay() {
         <div id="slide1" className="carousel-item relative w-full">
           <div className=" w-full pt-10 lg:px-20 px-10 flex flex-col justify-center">
             <div className="text-[#707070] text-center">
-              Guru{"'"}s services have allowed me to find more freelancing work
+              Freelancer hub services have allowed me to find more freelancing work
               as a writer than any other website. It is easy to communicate with
               clients through their message system and their SafePay feature
               ensures that all funds are secured prior to any work being done. I
-              would recommend Guru to any freelancer who is looking to find new
+              would recommend Freelancer hub to any freelancer who is looking to find new
               clients online.
             </div>
             <div className="justify-center pt-5 flex items-center gap-3">
@@ -55,12 +55,12 @@ export default function SectionWhatClientSay() {
         <div id="slide2" className="carousel-item relative w-full">
           <div className=" w-full pt-10 lg:px-20 px-10 flex flex-col justify-center">
             <div className="text-[#707070] text-center">
-              Guru.com is my favorite freelance platform. I love the
+              Freelancer hub is my favorite freelance platform. I love the
               functionality, the support and the strong workflow element,
               particularly the SafePay feature which makes the transfer of funds
               so easy. I love the integration with PayPal and the ability to
               amend agreements, with all steps communicated to and actioned by
-              both sides. Of all the freelance platforms I have used, Guru is by
+              both sides. Of all the freelance platforms I have used, Freelancer hub is by
               far my favorite.
             </div>
             <div className="justify-center pt-5 flex items-center gap-3">

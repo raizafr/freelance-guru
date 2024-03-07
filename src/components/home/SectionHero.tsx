@@ -23,10 +23,10 @@ export default function SectionHero() {
             />
             <div>Or</div>
             <Link
-              href={"#"}
+              href={"/register"}
               className="bg-[#4FBFA3] px-5 py-2.5 text-white rounded-3xl text-sm md:text-base w-full md:w-fit text-center"
             >
-              Post a Job - It{"'"}s Free
+              Sign Up
             </Link>
           </div>
           <div className="leading-[19px] flex gap-1 flex-wrap">

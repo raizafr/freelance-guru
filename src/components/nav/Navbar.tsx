@@ -169,21 +169,15 @@ export default function Navbar() {
             <ul className="flex items-center gap-5">
               <li>
                 <Link
-                  href={"#"}
-                  className="px-5 py-2 rounded-2xl bg-[#4FBFA3] text-white font-semibold"
+                  href={"/register"}
+                  className="px-5 py-2 rounded-3xl bg-[#4FBFA3] text-white font-semibold flex items-center gap-1"
                 >
-                  Post a Job
+                  <span>
+                    <RxPencil2 />
+                  </span>
+                  <span>Sign Up</span>
                 </Link>
               </li>
-              <Link
-                href={"/register"}
-                className="font-semibold hover:text-[#4FBFA3] duration-200 text-lg flex items-center gap-1"
-              >
-                <span>
-                  <RxPencil2 />
-                </span>
-                <span>Sign Up</span>
-              </Link>
               <Link
                 href={"/login"}
                 className="font-semibold hover:text-[#4FBFA3] duration-200 text-lg flex items-center gap-1"
@@ -198,7 +192,13 @@ export default function Navbar() {
         </nav>
       </div>
       <nav className="navbar lg:hidden container mx-auto px-3 bg-white bg-opacity-65 z-10 backdrop-blur-md sticky top-0">
-        <div className={`navbar-start ${pathName==="/login" || pathName.startsWith('/register')?'hidden':''}`}>
+        <div
+          className={`navbar-start ${
+            pathName === "/login" || pathName.startsWith("/register")
+              ? "hidden"
+              : ""
+          }`}
+        >
           <button className="" onClick={() => setShowSidebar(!showSidebar)}>
             <GiHamburgerMenu className="scale-150" />
           </button>
@@ -214,10 +214,22 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <div className={`navbar-end ${pathName==="/login" || pathName.startsWith('/register')?'hidden':''}`}>
-          <button className="px-3 py-2 rounded-3xl bg-[#4FBFA3] text-white font-semibold text-sm ">
-            Post a Job
-          </button>
+        <div
+          className={`navbar-end ${
+            pathName === "/login" || pathName.startsWith("/register")
+              ? "hidden"
+              : ""
+          }`}
+        >
+          <Link
+            href={"/register"}
+            className="px-3 py-2 rounded-3xl bg-[#4FBFA3] text-white font-semibold text-sm flex items-center gap-1"
+          >
+            <span>
+              <RxPencil2 />
+            </span>
+            <span>Sign Up</span>
+          </Link>
         </div>
       </nav>
       <aside
