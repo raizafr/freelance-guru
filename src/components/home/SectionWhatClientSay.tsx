@@ -4,11 +4,11 @@ import React from "react";
 export default function SectionWhatClientSay() {
   return (
     <section className="container mx-auto lg:px-12 px-3 md:px-5 py-16">
-      <h1 className="text-[35px] leading-[53px] font-[500] text-center">
+      <h1 className="text-[35px] leading-[53px] font-[500] text-center text-[#094063]">
         What Clients Say
       </h1>
       <div className="flex justify-center pt-2">
-        <div className="w-20 h-0.5 bg-[#2777C6] text-center" />
+        <div className="w-20 h-0.5 bg-[#4FBFA3] text-center" />
       </div>
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">

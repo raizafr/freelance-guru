@@ -7,11 +7,11 @@ export default function SectionWorkYouWay() {
   return (
     <div className="bg-cover bg-[#F7F7F7]">
       <section className="container mx-auto lg:px-12 px-3 md:px-5 py-16">
-        <h1 className="text-[35px] leading-[53px] font-[500] text-center">
+        <h1 className="text-[35px] leading-[53px] font-[500] text-center text-[#094063]">
           Work Your Way
         </h1>
         <div className="flex justify-center pt-2">
-          <div className="w-20 h-0.5 bg-[#2777C6] text-center" />
+          <div className="w-20 h-0.5 bg-[#4FBFA3] text-center" />
         </div>
         <div className="flex pt-10 flex-col md:flex-row">
           <div className="flex-1 flex justify-center md:block">
@@ -23,7 +23,7 @@ export default function SectionWorkYouWay() {
             />
           </div>
           <div className="flex-1">
-            <h2 className="text-[20px] leading-[23px] font-semibold">
+            <h2 className="text-[20px] leading-[23px] font-semibold text-[#094063]">
               Choose from four Payment terms and create Agreements.
             </h2>
             <div className="pt-5">

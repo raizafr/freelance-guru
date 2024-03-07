@@ -41,7 +41,7 @@ export default function Pro() {
               className="border p-2"
             />
             <label htmlFor="image">
-              <div className="bg-[#DDDDDD] px-6 py-1 w-fit rounded-md text-sm">
+              <div className="bg-[#4FBFA3] px-6 py-1 w-fit rounded-md text-sm text-white">
                 Upload Photo
               </div>
               <input
@@ -61,7 +61,7 @@ export default function Pro() {
               </div>
               <input
                 type="text"
-                className="w-full border px-3 py-1.5 rounded"
+                className="w-full border px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3]"
                 placeholder="Screen Name"
               />
             </div>
@@ -81,7 +81,7 @@ export default function Pro() {
             <h2 className="text-sm">Search Address</h2>
             <input
               type="text"
-              className="w-full border-b px-3 py-1.5 focus:outline-none focus:border-black"
+              className="w-full border-b px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
               placeholder="Enter a location"
             />
           </label>
@@ -90,7 +90,7 @@ export default function Pro() {
             <select
               name=""
               id=""
-              className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-black"
+              className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
             >
               <option value="" selected>
                 USA
@@ -103,7 +103,7 @@ export default function Pro() {
             <h2 className="text-sm">Street</h2>
             <input
               type="text"
-              className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-black"
+              className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
               placeholder="Street"
             />
           </label>
@@ -112,7 +112,7 @@ export default function Pro() {
               <h2 className="text-sm">City</h2>
               <input
                 type="text"
-                className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-black"
+                className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
                 placeholder="City"
               />
             </label>
@@ -120,7 +120,7 @@ export default function Pro() {
               <h2 className="text-sm">State</h2>
               <input
                 type="text"
-                className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-black"
+                className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
                 placeholder="Street"
               />
             </label>
@@ -128,7 +128,7 @@ export default function Pro() {
               <h2 className="text-sm">Postal Code</h2>
               <input
                 type="text"
-                className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-black"
+                className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
                 placeholder="Street"
               />
             </label>
@@ -137,7 +137,7 @@ export default function Pro() {
             <h2 className="text-sm">Suburb/ district/ neighborhood</h2>
             <input
               type="text"
-              className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-black"
+              className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
               placeholder="Suburb/ district/ neighborhood"
             />
           </label>
@@ -147,7 +147,7 @@ export default function Pro() {
       <div className="w-full mb-10 mt-5 ">
         <button
           onClick={() => router.push("/register/completeYourProfile")}
-          className="px-5 py-2 rounded bg-[#196EAF] text-white font-semibold hover:scale-105 duration-200"
+          className="px-5 py-2 rounded-3xl bg-[#4FBFA3] text-white font-semibold hover:scale-105 duration-200"
         >
           Save
         </button>

@@ -24,14 +24,6 @@ export default function SectionTopUserFrelance({ title }: { title: string }) {
           />
         ))}
       </div>
-      <div className="text-[16px] leading-[24px] text-[#707070] text-center pt-10">
-        See All {title} Freelancing Services
-      </div>
-      <div className="flex justify-center pt-5">
-        <button className="px-5 py-2 rounded bg-[#196EAF] text-white font-semibold w-fit">
-          View All
-        </button>
-      </div>
     </section>
   );
 }

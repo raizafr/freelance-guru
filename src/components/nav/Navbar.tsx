@@ -146,8 +146,8 @@ export default function Navbar() {
     </div>
   ) : (
     <>
-      <div className="border-b hidden lg:block">
-        <nav className="navbar bg-base-100 container mx-auto lg:px-12 ">
+      <div className="border-b hidden lg:block sticky top-0 bg-white backdrop-blur-md bg-opacity-30 z-10">
+        <nav className="navbar container mx-auto lg:px-12 ">
           <div className="flex-1 flex items-center lg:gap-10 md:gap-4">
             <Link href={"/"}>
               <Image
@@ -157,16 +157,6 @@ export default function Navbar() {
                 alt="logo"
                 loading="lazy"
               />
-            </Link>
-            <Link
-              href={"#"}
-              className={`font-semibold hover:text-blue-500 duration-200 ${
-                pathName === "/login" || pathName.startsWith("/register")
-                  ? "hidden"
-                  : ""
-              }`}
-            >
-              How It Works
             </Link>
           </div>
           <div
@@ -180,14 +170,14 @@ export default function Navbar() {
               <li>
                 <Link
                   href={"#"}
-                  className="px-5 py-2 rounded bg-[#196EAF] text-white font-semibold"
+                  className="px-5 py-2 rounded-2xl bg-[#4FBFA3] text-white font-semibold"
                 >
                   Post a Job
                 </Link>
               </li>
               <Link
                 href={"/register"}
-                className="font-semibold hover:text-blue-500 duration-200 text-lg flex items-center gap-1"
+                className="font-semibold hover:text-[#4FBFA3] duration-200 text-lg flex items-center gap-1"
               >
                 <span>
                   <RxPencil2 />
@@ -196,7 +186,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href={"/login"}
-                className="font-semibold hover:text-blue-500 duration-200 text-lg flex items-center gap-1"
+                className="font-semibold hover:text-[#4FBFA3] duration-200 text-lg flex items-center gap-1"
               >
                 <span>
                   <IoIosLogIn />
@@ -207,7 +197,7 @@ export default function Navbar() {
           </div>
         </nav>
       </div>
-      <nav className="navbar bg-base-100 lg:hidden container mx-auto px-3">
+      <nav className="navbar lg:hidden container mx-auto px-3 bg-white bg-opacity-65 z-10 backdrop-blur-md sticky top-0">
         <div className={`navbar-start ${pathName==="/login" || pathName.startsWith('/register')?'hidden':''}`}>
           <button className="" onClick={() => setShowSidebar(!showSidebar)}>
             <GiHamburgerMenu className="scale-150" />
@@ -225,7 +215,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className={`navbar-end ${pathName==="/login" || pathName.startsWith('/register')?'hidden':''}`}>
-          <button className="px-3 py-2 rounded bg-[#196EAF] text-white font-semibold text-sm ">
+          <button className="px-3 py-2 rounded-3xl bg-[#4FBFA3] text-white font-semibold text-sm ">
             Post a Job
           </button>
         </div>
@@ -245,16 +235,6 @@ export default function Navbar() {
             </button>
           </div>
           <ul className="text-sm font-semibold overflow-y-auto flex-1">
-            <li>
-              <Link
-                href={"#"}
-                className="hover:underline block hover:bg-gray-300 px-5 py-3"
-              >
-                How It Works
-              </Link>
-            </li>
-            <div className="border-b w-full pt-1" />
-            <div className="w-full pt-1" />
             <li>
               <Link
                 href={"/register"}

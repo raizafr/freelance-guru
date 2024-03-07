@@ -75,7 +75,7 @@ export default function CardTopUsersFreelance({
         </div>
         <div className="flex justify-center pt-5">
           <Link href={`/hire/freelancers/detail/${id}` } className="px-5 py-2.5 rounded  text-[#2777C6] border hover:text-white hover:bg-[#2777C6] border-[#2777C6] font-semibold w-fit hover:scale-105 duration-200 ">
-            Get a Quote
+            View Profile
           </Link>
         </div>
       </div>

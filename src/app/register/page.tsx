@@ -10,7 +10,7 @@ export default function Register() {
   const router = useRouter();
   return (
     <section className="container mx-auto flex md:shadow-xl my-5">
-      <div className="bg-[#4F86C4] flex-1 text-center text-white pt-8 lg:px-20 px-5 hidden md:block">
+      <div className="bg-[#4FBFA3] flex-1 text-center text-white pt-8 lg:px-20 px-5 hidden md:block">
         <h1 className="text-[32px] leading-[46px]">Grow with Guru</h1>
         <div className="w-64 carousel rounded-box">
           <div className="carousel-item w-full flex-col">
@@ -50,20 +50,20 @@ export default function Register() {
         </div>
       </div>
       <div className="flex-1 pt-8 px-10 md:px-5 lg:px-20 space-y-5 pb-28 justify-center items-center ">
-        <h1 className="text-[32px] leading-[46px] text-center text-blue-500">
+        <h1 className="text-[32px] leading-[46px] text-center text-[#4FBFA3]">
           Sign Up
         </h1>
         <div className="border-b" />
         <div className="space-y-5">
           <input
             type="text"
-            className="focus:border-blue-400 border focus:outline-none w-full px-5 py-2.5"
+            className="focus:border-[#4FBFA3] border focus:outline-none w-full px-5 py-2.5"
             placeholder="Full Name"
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
-            className="focus:border-blue-400 border focus:outline-none w-full px-5 py-2.5"
+            className="focus:border-[#4FBFA3] border focus:outline-none w-full px-5 py-2.5"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -73,9 +73,9 @@ export default function Register() {
               onClick={() => router.push("/register/chooseAccounType")}
               className={`${
                 !email || !name
-                  ? "text-[#196EAF] cursor-not-allowed"
-                  : "bg-[#196EAF] text-white cursor-pointer"
-              } px-5 py-3 rounded  font-semibold disabled border border-[#196EAF]`}
+                  ? "text-[#4FBFA3] cursor-not-allowed"
+                  : "bg-[#4FBFA3] text-white cursor-pointer"
+              } px-5 py-3 rounded-3xl  font-semibold disabled border border-[#4FBFA3]`}
             >
               Proceed
             </button>
@@ -84,7 +84,7 @@ export default function Register() {
         <div className="text-[14px] leading-[21px] text-center">
           <span>
             Already have an account?
-            <Link href={"/login"} className="text-blue-500">
+            <Link href={"/login"} className="text-[#4FBFA3]">
               Log In
             </Link>
           </span>

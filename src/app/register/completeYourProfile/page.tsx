@@ -69,7 +69,7 @@ export default function CompleteYourProfile() {
               loading="lazy"
             />
             <div className="pt-2">
-              <label className="bg-gray-600 text-white px-3 py-1 rounded-md text-sm hover:scale-105 duration-200">
+              <label className="bg-[#4FBFA3] text-white px-3 py-1 rounded-md text-sm hover:scale-105 duration-200">
                 <span className="cursor-pointer hover:scale-105 duration-200">
                   Change Photo
                 </span>
@@ -95,7 +95,7 @@ export default function CompleteYourProfile() {
               </div>
               <input
                 type="text"
-                className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
+                className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3]"
               />
             </label>
             <div className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center pt-2">
@@ -131,7 +131,7 @@ export default function CompleteYourProfile() {
                       id=""
                       cols={30}
                       rows={3}
-                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
+                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3]"
                     ></textarea>
                     <div className="text-[11px] text-gray-500">
                       190 characters left
@@ -149,7 +149,7 @@ export default function CompleteYourProfile() {
                       cols={30}
                       rows={3}
                       placeholder="Tell your story! Include information about your work experience, values, personal anecdotes, hobbies, etc."
-                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
+                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3]"
                     ></textarea>
                     <div className="text-[11px] text-gray-500">
                       3000 characters left
@@ -167,7 +167,7 @@ export default function CompleteYourProfile() {
                       id=""
                       cols={30}
                       rows={3}
-                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
+                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3]"
                     ></textarea>
                     <div className="text-[11px] text-gray-500">
                       190 characters left
@@ -185,7 +185,7 @@ export default function CompleteYourProfile() {
                       cols={30}
                       rows={3}
                       placeholder="Tell your company's story! Include information about the individuals that make up the company, as well as the company itself."
-                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
+                      className="border w-full px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3]"
                     ></textarea>
                     <div className="text-[11px] text-gray-500">
                       3000 characters left
@@ -196,7 +196,7 @@ export default function CompleteYourProfile() {
                   <div className="sm:w-1/5 sm:text-right">Operating since</div>
                   <input
                     type="text"
-                    className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500"
+                    className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3]"
                   />
                 </label>
                 <label className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center ">
@@ -214,7 +214,7 @@ export default function CompleteYourProfile() {
                     <input
                       type="file"
                       accept="image/*"
-                      className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-blue-500 hidden"
+                      className="border flex-1 px-3 py-1.5 rounded focus:outline-none focus:border-[#4FBFA3] hidden"
                     />
                   </div>
                 </label>
@@ -230,7 +230,7 @@ export default function CompleteYourProfile() {
                     htmlFor="uploadDocument"
                     className="flex flex-col items-left cursor-pointer"
                   >
-                    <div className="text-blue-500 border rounded-full p-4 w-fit relative hover:scale-105 duration-200">
+                    <div className="text-[#4FBFA3] border rounded-full p-4 w-fit relative hover:scale-105 duration-200">
                       <MdPermIdentity className="scale-150" />
                       <CiCirclePlus className="absolute top-0 right-0 scale-75" />
                     </div>
@@ -271,7 +271,7 @@ export default function CompleteYourProfile() {
                     htmlFor="uploadDocument2"
                     className="flex flex-col items-start cursor-pointer"
                   >
-                    <div className="text-blue-500 border rounded-full p-4 w-fit relative hover:scale-105 duration-200">
+                    <div className="text-[#4FBFA3] border rounded-full p-4 w-fit relative hover:scale-105 duration-200">
                       <FaRegAddressBook className="scale-150" />
                       <CiCirclePlus className="absolute top-0 right-0 scale-75" />
                     </div>
@@ -308,7 +308,7 @@ export default function CompleteYourProfile() {
               <div className="flex-1">
                 <button
                   onClick={() => router.push("/register/addService")}
-                  className="w-fit bg-[#2777C6] text-white px-3 py-1.5 rounded hover:scale-105 duration-200"
+                  className="w-fit bg-[#4FBFA3] text-white px-3 py-1.5 rounded-3xl hover:scale-105 duration-200"
                 >
                   Save
                 </button>
