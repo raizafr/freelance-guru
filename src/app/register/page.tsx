@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/button/Button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -68,17 +69,12 @@ export default function Register() {
             onChange={(e) => setEmail(e.target.value)}
           />
           <div className="flex justify-end">
-            <button
+            <Button
               disabled={!email || !name ? true : false}
               onClick={() => router.push("/register/chooseAccounType")}
-              className={`${
-                !email || !name
-                  ? "text-[#4FBFA3] cursor-not-allowed"
-                  : "bg-[#4FBFA3] text-white cursor-pointer"
-              } px-5 py-3 rounded-3xl  font-semibold disabled border border-[#4FBFA3]`}
             >
               Proceed
-            </button>
+            </Button>
           </div>
         </div>
         <div className="text-[14px] leading-[21px] text-center">

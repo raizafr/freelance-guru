@@ -11,6 +11,7 @@ import { MdOutlineDescription } from "react-icons/md";
 import { VscTools } from "react-icons/vsc";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
+import Button from "@/components/button/Button";
 
 const CustomEditor = dynamic(
   () => {
@@ -301,12 +302,7 @@ export default function AddServiceDedicatedResource() {
         </div>
       </div>
       <div className="mt-10 space-x-4 mb-10 sm:">
-        <button
-          onClick={() => router.push("/pro/dashboard")}
-          className="px-3 border border-[#4FBFA3] hover:text-[#4FBFA3] hover:bg-transparent py-2 rounded-3xl bg-[#4FBFA3] duration-200 text-white font-semibold text-sm "
-        >
-          Next Step
-        </button>
+        <Button onClick={() => router.push("/pro/dashboard")}>Next Step</Button>
       </div>
     </section>
   );

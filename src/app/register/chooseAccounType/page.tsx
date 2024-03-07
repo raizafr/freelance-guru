@@ -1,6 +1,6 @@
 "use client";
 
-
+import Button from "@/components/button/Button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -94,17 +94,12 @@ export default function ChooseAccounType() {
             <Link href={"/register"} className="text-sm text-[#4FBFA3]">
               Back
             </Link>
-            <button
+            <Button
               disabled={!password ? true : false}
               onClick={() => router.push("/register/pro")}
-              className={`${
-                !password 
-                  ? "text-[#4FBFA3] cursor-not-allowed"
-                  : "bg-[#4FBFA3] text-white cursor-pointer"
-              } px-5 py-3 rounded-3xl  font-semibold disabled border border-[#4FBFA3]`}
             >
               Proceed
-            </button>
+            </Button>
           </div>
         </div>
         <div className="text-[14px] leading-[21px] text-center">

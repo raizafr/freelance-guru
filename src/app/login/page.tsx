@@ -1,3 +1,4 @@
+import Button from "@/components/button/Button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +19,6 @@ export default function Login() {
             </div>
           </div>
           <div className="carousel-item w-full flex-col">
-           
             <div>
               <h2 className="font-semibold text-lg">Flexible Platform</h2>
               <h3 className="font-semibold text-base">
@@ -70,9 +70,7 @@ export default function Login() {
             </Link>
           </div>
           <div className="flex justify-end">
-            <button className="px-5 py-3 rounded-3xl bg-[#4FBFA3] text-white font-semibold">
-              Login
-            </button>
+            <Button>Login</Button>
           </div>
         </form>
         <div className="text-[14px] leading-[21px] text-center">

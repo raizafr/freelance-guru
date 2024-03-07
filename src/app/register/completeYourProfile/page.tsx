@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/button/Button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { ChangeEvent, useState } from "react";
@@ -306,12 +307,9 @@ export default function CompleteYourProfile() {
             <div className="font-[500] flex flex-col sm:flex-row gap-3 sm:items-center pb-10 pt-5">
               <div className="w-1/5" />
               <div className="flex-1">
-                <button
-                  onClick={() => router.push("/register/addService")}
-                  className="w-fit bg-[#4FBFA3] text-white px-3 py-1.5 rounded-3xl hover:scale-105 duration-200"
-                >
+                <Button onClick={() => router.push("/register/addService")}>
                   Save
-                </button>
+                </Button>
               </div>
             </div>
           </div>
