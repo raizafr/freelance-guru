@@ -44,7 +44,7 @@ export default function AddServiceDedicatedResource() {
         <div className="px-4 mt-5">
           {/* service title */}
           <h2 className="flex items-center gap-2 text-lg">
-            <IoSettingsOutline className="text-[#2777C6]" />
+            <IoSettingsOutline className="text-[#4FBFA3]" />
             <span className="font-semibold">Service Title</span>
           </h2>
           <div className="text-[14px] mt-2">
@@ -53,24 +53,24 @@ export default function AddServiceDedicatedResource() {
             </h3>
             <input
               type="text"
-              className="w-full px-3 py-2 rounded border focus:outline-none focus:border-blue-500 mt-2"
+              className="w-full px-3 py-2 rounded border focus:outline-none focus:border-[#4FBFA3] mt-2"
               placeholder="E.g. Android App Development"
             />
           </div>
           <div tabIndex={0} className="collapse w-fit text-xs -ml-3">
             <input type="checkbox" />
-            <div className="collapse-title text-[#2777C6]">Examples</div>
+            <div className="collapse-title text-[#4FBFA3]">Examples</div>
             <div className="collapse-content -mt-5">
               <div className="flex items-center gap-2">
-                <div className="bg-[#2777C6] w-1 h-1 rounded-full" />
+                <div className="bg-[#4FBFA3] w-1 h-1 rounded-full" />
                 <div>Mobile and Web Application Development</div>
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#2777C6] w-1 h-1 rounded-full" />
+                <div className="bg-[#4FBFA3] w-1 h-1 rounded-full" />
                 <div>Full Stack Web Development</div>
               </div>
               <div className="flex items-center gap-2">
-                <div className="bg-[#2777C6] w-1 h-1 rounded-full" />
+                <div className="bg-[#4FBFA3] w-1 h-1 rounded-full" />
                 <div>Creative, Content and Technical Writing</div>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function AddServiceDedicatedResource() {
 
           {/* service description */}
           <h2 className="flex items-center gap-2 text-lg mt-5 mb-3">
-            <MdOutlineDescription className="text-[#2777C6]" />
+            <MdOutlineDescription className="text-[#4FBFA3]" />
             <span className="font-semibold">Service Description</span>
           </h2>
           <div className="text-[14px] mt-2">
@@ -97,7 +97,7 @@ export default function AddServiceDedicatedResource() {
 
           {/* Service Category and skills */}
           <h2 className="flex items-center gap-2 text-lg mt-5 mb-3">
-            <VscTools className="text-[#2777C6]" />
+            <VscTools className="text-[#4FBFA3]" />
             <span className="font-semibold">Service Category and Skills</span>
           </h2>
           {!selectCategory && (
@@ -145,7 +145,7 @@ export default function AddServiceDedicatedResource() {
                 </div>
                 <div
                   onClick={() => setSelectCategory(null)}
-                  className="w-fit text-sm text-blue-500 hover:underline cursor-pointer"
+                  className="w-fit text-sm text-[#4FBFA3] hover:underline cursor-pointer"
                 >
                   Clear
                 </div>
@@ -228,7 +228,7 @@ export default function AddServiceDedicatedResource() {
 
           {/* Service Cost */}
           <h2 className="flex items-center gap-2 text-lg mt-5 mb-3">
-            <GrMoney className="text-[#2777C6]" />
+            <GrMoney className="text-[#4FBFA3]" />
             <span className="font-semibold">Service Cost</span>
           </h2>
           <div className="text-[14px] mt-2 flex lg:gap-28 md:gap-16 gap-7 mb-5">
@@ -237,7 +237,7 @@ export default function AddServiceDedicatedResource() {
               <div className="w-fit relative pt-1">
                 <input
                   type="number"
-                  className="border focus:outline-none rounded focus:border-blue-500 pl-4 pr-2 py-2 w-24 md:w-36"
+                  className="border focus:outline-none rounded focus:border-[#4FBFA3] pl-4 pr-2 py-2 w-24 md:w-36"
                 />
                 <div className="text-gray-400 absolute top-[17px] left-1">
                   <BiDollar />
@@ -251,7 +251,7 @@ export default function AddServiceDedicatedResource() {
               <div className="w-fit relative pt-1">
                 <input
                   type="number"
-                  className="border focus:outline-none rounded focus:border-blue-500 pl-4 pr-2 py-2 w-24 md:w-36"
+                  className="border focus:outline-none rounded focus:border-[#4FBFA3] pl-4 pr-2 py-2 w-24 md:w-36"
                 />
                 <div className="text-gray-400 absolute top-[17px] left-1">
                   <BiDollar />
@@ -264,7 +264,7 @@ export default function AddServiceDedicatedResource() {
 
           {/* Service Thumbnail */}
           <h2 className="flex items-center gap-2 text-lg mt-5 mb-3">
-            <CiImageOn className="text-[#2777C6]" />
+            <CiImageOn className="text-[#4FBFA3]" />
             <span className="font-semibold">Service Thumbnail</span>
           </h2>
           <div className="text-[14px] mt-2">
@@ -303,7 +303,7 @@ export default function AddServiceDedicatedResource() {
       <div className="mt-10 space-x-4 mb-10 sm:">
         <button
           onClick={() => router.push("/pro/dashboard")}
-          className="px-3 border border-[#196EAF] hover:text-[#196EAF] hover:bg-transparent py-2 rounded bg-[#196EAF] duration-200 text-white font-semibold text-sm "
+          className="px-3 border border-[#4FBFA3] hover:text-[#4FBFA3] hover:bg-transparent py-2 rounded-3xl bg-[#4FBFA3] duration-200 text-white font-semibold text-sm "
         >
           Next Step
         </button>
