@@ -50,7 +50,7 @@ export default function AddServiceDedicatedResource() {
           </h2>
           <div className="text-[14px] mt-2">
             <h3 className="text-gray-600">
-              Mention the exact skill that you offer.
+              Mention the exact service that you offer.
             </h3>
             <input
               type="text"
@@ -97,7 +97,7 @@ export default function AddServiceDedicatedResource() {
           {/* end service description */}
 
           {/* Service Category and skills */}
-          <h2 className="flex items-center gap-2 text-lg mt-5 mb-3">
+          {/* <h2 className="flex items-center gap-2 text-lg mt-5 mb-3">
             <VscTools className="text-[#4FBFA3]" />
             <span className="font-semibold">Service Category and Skills</span>
           </h2>
@@ -224,7 +224,7 @@ export default function AddServiceDedicatedResource() {
               </div>
             </div>
           )}
-          <div className="border-b" />
+          <div className="border-b" /> */}
           {/* end Service Category and skills */}
 
           {/* Service Cost */}
@@ -232,6 +232,9 @@ export default function AddServiceDedicatedResource() {
             <GrMoney className="text-[#4FBFA3]" />
             <span className="font-semibold">Service Cost</span>
           </h2>
+          <h3 className="text-gray-600 text-sm">
+          Enter the minimum amount that you charge for your services.
+            </h3>
           <div className="text-[14px] mt-2 flex lg:gap-28 md:gap-16 gap-7 mb-5">
             <label htmlFor="">
               <div className="font-[500] text-gray-700 text-xs">Rate/Hour</div>
@@ -247,7 +250,7 @@ export default function AddServiceDedicatedResource() {
             </label>
             <label htmlFor="">
               <div className="font-[500] text-gray-700 text-xs text-nowrap">
-                Minimum Budget
+                Rate/Week
               </div>
               <div className="w-fit relative pt-1">
                 <input

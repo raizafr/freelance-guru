@@ -21,25 +21,25 @@ export default function SectionTopFreelancer() {
             "/svg/logistics-truck-ultrathin-vehicle-outline-svgrepo-com.svg"
           }
           title="Logistics and Supply-chain"
-          subTitle="276,711"
+          subTitle="55,678"
           link="/hire/freelancers/logistic-and-supply-chain"
         />
         <CardFIndTopFreelance
           icon={"/svg/human-resources-svgrepo-com.svg"}
           title="Human Resources"
-          subTitle="276,711"
+          subTitle="101,000"
           link="/hire/freelancers/human-resource"
         />
         <CardFIndTopFreelance
           icon={"/svg/marketing-laptop-chat-comment-dialogue-svgrepo-com.svg"}
           title="Sales Marketing"
-          subTitle="276,711"
+          subTitle="78,689"
           link="/hire/freelancers/sales-marketing"
         />
         <CardFIndTopFreelance
           icon={"/svg/administrator-analytics-svgrepo-com.svg"}
           title="Administrative & Operations"
-          subTitle="276,711"
+          subTitle="127,086"
           link="/hire/freelancers/adminisitrative-and-operation"
         />
       </div>

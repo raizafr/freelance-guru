@@ -101,7 +101,7 @@ export default function Pro() {
             </select>
           </label>
           <label className="px-6 space-y-1">
-            <h2 className="text-sm">Street</h2>
+            <h2 className="text-sm">Street <span className="text-red-500">*</span></h2>
             <input
               type="text"
               className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
@@ -110,7 +110,7 @@ export default function Pro() {
           </label>
           <div className="flex gap-2 flex-wrap">
             <label className="space-y-1 flex-1">
-              <h2 className="text-sm">City</h2>
+              <h2 className="text-sm">City <span className="text-red-500">*</span></h2>
               <input
                 type="text"
                 className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
@@ -118,7 +118,7 @@ export default function Pro() {
               />
             </label>
             <label className="space-y-1 flex-1">
-              <h2 className="text-sm">State</h2>
+              <h2 className="text-sm">State <span className="text-red-500">*</span></h2>
               <input
                 type="text"
                 className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
@@ -126,7 +126,7 @@ export default function Pro() {
               />
             </label>
             <label className="space-y-1 flex-1">
-              <h2 className="text-sm">Postal Code</h2>
+              <h2 className="text-sm">Postal Code <span className="text-red-500">*</span></h2>
               <input
                 type="text"
                 className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"
@@ -135,7 +135,7 @@ export default function Pro() {
             </label>
           </div>
           <label className="px-6 space-y-1">
-            <h2 className="text-sm">Suburb/ district/ neighborhood</h2>
+            <h2 className="text-sm">Suburb/ district/ neighborhood <span className="text-red-500">*</span></h2>
             <input
               type="text"
               className="w-full border rounded-md px-3 py-1.5 focus:outline-none focus:border-[#4FBFA3]"

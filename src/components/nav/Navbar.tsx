@@ -21,9 +21,9 @@ export default function Navbar() {
       <nav className="navbar container mx-auto lg:px-12 ">
         <div className="flex-1 flex items-center lg:gap-10 md:gap-4">
           <Image
-            src={"/svg/logo.svg"}
-            width={100}
-            height={100}
+            src={"/svg/Freelancer-Hub.svg"}
+            width={120}
+            height={120}
             alt="logo"
             loading="lazy"
           />
@@ -151,9 +151,9 @@ export default function Navbar() {
           <div className="flex-1 flex items-center lg:gap-10 md:gap-4">
             <Link href={"/"}>
               <Image
-                src={"/svg/logo.svg"}
-                width={100}
-                height={100}
+                src={"/svg/Freelancer-Hub.svg"}
+                width={120}
+                height={120}
                 alt="logo"
                 loading="lazy"
               />
@@ -206,9 +206,9 @@ export default function Navbar() {
         <div className="navbar-center">
           <Link href={"/"}>
             <Image
-              src={"/svg/logo.svg"}
-              width={100}
-              height={100}
+              src={"/svg/Freelancer-Hub.svg"}
+              width={120}
+              height={120}
               alt="logo"
               loading="lazy"
             />
@@ -238,7 +238,16 @@ export default function Navbar() {
         }`}
       >
         <div className="flex max-h-screen flex-col">
-          <div className="flex justify-end py-5 px-5 border-b flex-none shadow-md">
+          <div className="flex justify-between py-[11px] px-5 border-b flex-none shadow-md">
+            <div>
+              <Image
+                src={"/svg/Freelancer-Hub.svg"}
+                width={120}
+                height={120}
+                alt="logo"
+                loading="lazy"
+              />
+            </div>
             <button
               className="hover:scale-105 duration-200"
               onClick={() => setShowSidebar(!showSidebar)}

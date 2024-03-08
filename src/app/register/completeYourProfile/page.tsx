@@ -223,7 +223,7 @@ export default function CompleteYourProfile() {
             )}
             <label className="font-[500] flex flex-col sm:flex-row sm:gap-3 sm:items-center pt-4">
               <div className="sm:w-1/5 sm:text-right">
-                <span>Verify Your Identity</span>
+                Verify Your Identity <span className="text-red-500">*</span>
               </div>
               <div className="flex-1">
                 <div className="pt-3 flex flex-col items-start">
@@ -265,7 +265,7 @@ export default function CompleteYourProfile() {
             </label>
 
             <label className="font-[500] flex flex-col sm:flex-row sm:gap-3 sm:items-center pt-4">
-              <div className="sm:w-1/5 sm:text-right">Verify Your Address</div>
+              <div className="sm:w-1/5 sm:text-right">Verify Your Address <span className="text-red-500">*</span></div>
               <div className="flex-1">
                 <div className="pt-3 flex flex-col items-start">
                   <label
