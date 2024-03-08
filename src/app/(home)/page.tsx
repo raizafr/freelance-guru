@@ -14,7 +14,7 @@ export default function Home() {
       <SectionItsEasy/>
       <SectionWorkYouWay/>
       <SectionWhatClientSay/>
-      <SectionGetQuotes/>
+      {/* <SectionGetQuotes/> */}
       {/* <SectionBrowseFreelancer/> */}
     </>
   );
