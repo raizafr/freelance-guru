@@ -65,7 +65,7 @@ export default function SectionWhatClientSay() {
             </div>
             <div className="justify-center pt-5 flex items-center gap-3">
               <Image
-                src={"/images/photo-russell-lee.avif"}
+                src={"/images/photo-scopic-software.avif"}
                 alt="example"
                 width={70}
                 height={70}
