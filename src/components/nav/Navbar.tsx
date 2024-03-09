@@ -21,7 +21,7 @@ export default function Navbar() {
       <nav className="navbar container mx-auto lg:px-12 ">
         <div className="flex-1 flex items-center lg:gap-10 md:gap-4">
           <Image
-            src={"/svg/Freelancer-Hub.svg"}
+            src={"/images/Freelancer-Hub.png"}
             width={120}
             height={120}
             alt="logo"
@@ -111,26 +111,11 @@ export default function Navbar() {
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 w-52"
               >
                 <li>
-                  <Link href={"#"}>Edit Account</Link>
-                </li>
-                <li>
-                  <Link href={"#"}>Edit Profile</Link>
-                </li>
-                <li>
-                  <Link href={"#"}>Buy Bids</Link>
-                </li>
-                <li>
-                  <Link href={"#"}>Membership</Link>
+                  <Link href={"/pro/profileBuild/editAboutInfo"}>Edit Profile</Link>
                 </li>
                 <li>
                   <Link href={"#"}>Manage Cash Account</Link>
                 </li>
-                <div className="border-b py-1" />
-                <div className="px-4 py-2 text-gray-400">ACCOUNT TEAM</div>
-                <li>
-                  <Link href={"#"}>Manage Team</Link>
-                </li>
-                <div className="border-b py-1" />
                 <div className="py-1" />
                 <li>
                   <Link href={"#"}>Help</Link>
@@ -151,7 +136,7 @@ export default function Navbar() {
           <div className="flex-1 flex items-center lg:gap-10 md:gap-4">
             <Link href={"/"}>
               <Image
-                src={"/svg/Freelancer-Hub.svg"}
+                src={"/images/Freelancer-Hub.png"}
                 width={120}
                 height={120}
                 alt="logo"
@@ -206,7 +191,7 @@ export default function Navbar() {
         <div className="navbar-center">
           <Link href={"/"}>
             <Image
-              src={"/svg/Freelancer-Hub.svg"}
+              src={"/images/Freelancer-Hub.png"}
               width={120}
               height={120}
               alt="logo"
@@ -241,7 +226,7 @@ export default function Navbar() {
           <div className="flex justify-between py-[11px] px-5 border-b flex-none shadow-md">
             <div>
               <Image
-                src={"/svg/Freelancer-Hub.svg"}
+                src={"/images/Freelancer-Hub.png"}
                 width={120}
                 height={120}
                 alt="logo"

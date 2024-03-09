@@ -57,7 +57,7 @@ export default function CompleteYourProfile() {
     <div className="container mx-auto px-3 lg:px-64 min-h-[90vh] flex flex-col justify-center items-center gap-5 my-10 ">
       <section className="border rounded flex-1 flex-col">
         <div className="py-2 border-b bg-[#FAFAFA] rounded-t px-4">
-          <h1 className="text-xl font-[400]">Complete Your Profile</h1>
+          <h1 className="text-base font-semibold">Create Your Profile</h1>
         </div>
         {/* photo */}
         <div className="px-4">

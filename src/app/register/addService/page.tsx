@@ -305,7 +305,7 @@ export default function AddServiceDedicatedResource() {
         </div>
       </div>
       <div className="mt-10 space-x-4 mb-10 sm:">
-        <Button onClick={() => router.push("/pro/dashboard")}>Next Step</Button>
+        <Button onClick={() => router.push("/pro/dashboard")}>Next</Button>
       </div>
     </section>
   );

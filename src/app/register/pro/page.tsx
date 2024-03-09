@@ -27,9 +27,6 @@ export default function Pro() {
           <h1 className="text-base font-semibold">
             Enter your Public Identity
           </h1>
-          <div className="text-sm font-[400]">
-            This will be visible to everyone
-          </div>
         </div>
         <div className="py-5 flex-1">
           <div className="flex flex-col justify-center items-center gap-4">
