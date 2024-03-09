@@ -5,7 +5,11 @@ import React, { useEffect, useState } from "react";
 import SectionTopUserFrelance from "./SectionTopUserFrelance";
 import SectionTopwithCategory from "./SectionTopwithCategory";
 
-export default function Freelancer({ params }: { params: { category: string } }) {
+export default function Freelancer({
+  params,
+}: {
+  params: { category: string };
+}) {
   const [titleHero, setTitleHero] = useState<string>("");
   useEffect(() => {
     if (params.category == "interior-design-architecture") {
@@ -27,30 +31,30 @@ export default function Freelancer({ params }: { params: { category: string } })
   return (
     <>
       <div className="bg-cover bg-[url('/svg/banner.svg')]">
-        <section className="flex container mx-auto text-white justify-center">
-          <div className="space-y-7 py-20 md:py-20 lg:py-32 px-3 md:px-12 text-center">
-            <h1 className="text-5xl font-bold">Find and Hire {titleHero}</h1>
-            <div>
-              <h2 className="text-2xl font-semibold">
-                Browse 276,711 {titleHero} Experts Free
-              </h2>
-              <h3 className="font-semibold text-lg">
-                Guru makes it easy for quality employers and freelancers to
-                connect, collaborate, and get work done flexibly and securely.
-              </h3>
-            </div>
-            <div className="flex items-center gap-4 flex-wrap">
+        <section className="flex container mx-auto text-white">
+          <div className="flex-1 space-y-5 md:space-y-7 py-20 md:py-20 lg:py-32 px-3 md:px-12">
+            <h1 className="text-3xl md:text-5xl font-bold text-wrap text-center lg:text-left">
+              Find and Hire {titleHero}
+            </h1>
+            <h2 className="text-xl md:text-2xl font-semibold text-wrap text-center lg:text-left">
+              Browse {titleHero} Experts Free
+            </h2>
+            <h3 className="font-semibold text-lg text-wrap text-center lg:text-left">
+              Freelancer hub makes it easy for quality employers and freelancers
+              to connect, collaborate, and get work done flexibly and securely.
+            </h3>
+            <div className="flex items-center gap-2 md:gap-4 flex-wrap flex-col md:flex-row">
               <input
                 type="text"
                 placeholder="What skill are you looking for?"
-                className="focus:outline-none border border-transparent focus:border-blue-500 rounded-md px-3 py-2.5 flex-1 text-black text-sm md:text-base"
+                className="focus:outline-none border border-transparent focus:border-blue-500 rounded-3xl px-3 py-2.5 flex-1 text-black text-sm md:text-base w-full"
               />
               <div>Or</div>
               <Link
-                href={"#"}
-                className="bg-[#045A9D] px-5 py-2.5 text-white rounded-md text-sm md:text-base"
+                href={"/register"}
+                className="bg-[#4FBFA3] px-5 py-2.5 text-white rounded-3xl text-sm md:text-base w-full md:w-fit text-center"
               >
-                Post a Job - It{"'"}s Free
+                Sign Up
               </Link>
             </div>
             <div className="leading-[19px] flex gap-1 flex-wrap">
@@ -86,9 +90,10 @@ export default function Freelancer({ params }: { params: { category: string } })
               </Link>
             </div>
           </div>
+          <div className="flex-none w-1/3 bg-[url('/images/bannerguy.avif')] bg-cover bg-left-bottom hidden lg:block"></div>
         </section>
       </div>
-      <SectionTopwithCategory title={titleHero} />
+      {/* <SectionTopwithCategory title={titleHero} /> */}
       <SectionTopUserFrelance title={titleHero} />
     </>
   );
