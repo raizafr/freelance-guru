@@ -7,7 +7,7 @@ import { GrUserManager } from "react-icons/gr";
 
 export default function SectionHero() {
   return (
-    <div className="bg-cover bg-[url('/svg/banner.svg')]">
+    <div className="bg-cover bg-[#094063]">
       <section className="flex container mx-auto text-white">
         <div className="flex-1 space-y-7 py-20 md:py-20 lg:py-32 px-3 md:px-12">
           <h1 className="text-5xl font-bold">Find & Hire Expert Freelancers</h1>
