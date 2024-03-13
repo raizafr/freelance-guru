@@ -15,29 +15,29 @@ export default function AddPayment() {
     useState<boolean>(true);
   const router = useRouter();
   return (
-    <section className="container mx-auto px-3 lg:px-64 min-h-[80vh] flex flex-col justify-center items-center gap-5 mt-10">
+    <section className="container mx-auto px-3 lg:px-64 min-h-[80vh] flex flex-col  items-center gap-5 py-10">
       {/* Enter your payments method */}
       <div className="border rounded flex-col w-full">
         <div className="py-2 border-b text-xs bg-[#FAFAFA] px-6">
-          <h1 className="text-base font-semibold">Add a Withdrawal Method</h1>
+          <h1 className="text-xl font-[400]">Add a Withdrawal Method</h1>
         </div>
         <div className="space-y-3 p-2 md:p-5">
           <CardTransferMethod
             imageUrl="/images/method-paypal_kfczli.png"
             title="PayPal Marketplace"
-            onClick={() => setIsHiddenPaypal(!isHiddenPaypal)}
+            onClick={() => setIsHiddenCreditCard(!isHiddenCreditCard)}
           />
-          <CardTransferMethod
+          {/* <CardTransferMethod
             imageUrl="/images/method-creditcard_ofn3ep.png"
             title="Credit Card"
             onClick={() => setIsHiddenCreditCard(!isHiddenCreditCard)}
-          />
+          /> */}
         </div>
       </div>
-      <ModalPaypal
+      {/* <ModalPaypal
         isHidden={isHiddenPaypal}
         onClick={() => setIsHiddenPaypal(!isHiddenPaypal)}
-      />
+      /> */}
       <ModalCreditCard
         isHidden={isHiddenCreditCard}
         onClick={() => setIsHiddenCreditCard(!isHiddenCreditCard)}
