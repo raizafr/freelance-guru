@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/button/Button";
+import Input from "@/components/input/Input";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -56,18 +57,8 @@ export default function Register() {
         </h1>
         <div className="border-b" />
         <div className="space-y-5">
-          <input
-            type="text"
-            className="focus:border-[#4FBFA3] border focus:outline-none w-full px-5 py-2.5"
-            placeholder="Full Name"
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="email"
-            className="focus:border-[#4FBFA3] border focus:outline-none w-full px-5 py-2.5"
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <Input placeholder="Full Name" type="text" onChange={(e) => setName(e.target.value)}/>
+          <Input placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)}/>
           <div className="flex justify-end">
             <Button
               disabled={!email || !name ? true : false}
