@@ -62,7 +62,7 @@ export default function Register() {
           <div className="flex justify-end">
             <Button
               disabled={!email || !name ? true : false}
-              onClick={() => router.push("/register/chooseAccounType")}
+              onClick={() => router.push("/register/addPassword")}
             >
               Proceed
             </Button>
