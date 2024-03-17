@@ -19,7 +19,7 @@ export default function ModalCreditCard({
   return (
     !isHidden && (
       <div className="absolute top-0 left-0 right-0 min-h-screen min-w-full bg-black bg-opacity-35 flex justify-center items-center z-10 px-2">
-        <div className="bg-white p-2 rounded-md md:w-1/2 lg:w-1/3">
+        <div className="bg-white p-2 w-full h-full md:rounded-md md:w-1/2 lg:w-1/3 ">
           <div className="flex justify-between border-b py-2 items-center">
             <h1 className="text-xl font-semibold">Add Credit Card</h1>
             <button className="text-2xl" onClick={onClick}>
@@ -72,7 +72,7 @@ export default function ModalCreditCard({
               </select>
               <div>
                 <input
-                  type="text"
+                  type="date"
                   placeholder="Expiration date"
                   className="border rounded-md focus:outline-none text-sm px-2 w-full py-1.5 focus:border-[#4FBFA3]"
                 />
