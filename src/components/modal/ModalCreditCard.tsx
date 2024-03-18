@@ -21,7 +21,7 @@ export default function ModalCreditCard({
       <div className="absolute top-0 left-0 right-0 min-h-screen min-w-full bg-black bg-opacity-35 flex justify-center items-center z-10 px-2">
         <div className="bg-white p-2 w-full h-full md:rounded-md md:w-1/2 lg:w-1/3 ">
           <div className="flex justify-between border-b py-2 items-center">
-            <h1 className="text-xl font-semibold">Add Credit Card</h1>
+            <h1 className="text-xl font-semibold">Add your debit or credit card</h1>
             <button className="text-2xl" onClick={onClick}>
               <IoCloseOutline />
             </button>
@@ -72,17 +72,29 @@ export default function ModalCreditCard({
               </select>
               <div>
                 <input
-                  type="date"
+                  type="month"
                   placeholder="Expiration date"
                   className="border rounded-md focus:outline-none text-sm px-2 w-full py-1.5 focus:border-[#4FBFA3]"
                 />
               </div>
-              <div>
+              <div className="flex justify-between items-center gap-5">
                 <input
                   type="text"
-                  placeholder="Security Code"
+                  placeholder="CVC"
                   className="border rounded-md focus:outline-none text-sm px-2 w-full py-1.5 focus:border-[#4FBFA3]"
                 />
+                 <Image
+                src={
+                  selectCardType == "visa"
+                    ? "/images/png-transparent-visa-logo-mastercard-credit-card-payment-visa-blue-company-text.png"
+                    : selectCardType == "masterCard"
+                    ? "/svg/MasterCard_Logo.svg.png"
+                    : "/images/free-credit-card-icon-2056-thumb.png"
+                }
+                alt="credit"
+                width={50}
+                height={0}
+              />
               </div>
               <div>
                 <input
@@ -95,9 +107,9 @@ export default function ModalCreditCard({
             <div className="pt-3">
               <button
                 onClick={() => setIsHiddenSavePayments(!isHiddenSavePayments)}
-                className="px-3 py-1.5 rounded-3xl text-sm font-semibold border border-[#4FBFA3] bg-[#4FBFA3] text-white"
+                className="px-3 py-1.5 rounded-md text-sm font-semibold border border-[#4FBFA3] bg-[#4FBFA3] text-white w-full"
               >
-                Save
+                Link Card
               </button>
             </div>
             <ModalSavePayments
