@@ -3,12 +3,8 @@ import React from "react";
 export default function VerifyCard() {
   return (
     <section className="container mx-auto px-3 lg:w-1/3 md:w-1/2 lg:py-10 py-5">
-      <h1 className="text-2xl font-semibold">
-        Confirm Capitec Debit Mastercard Debit
-      </h1>
       <div className="text-sm pt-2">
-        We charged $1.95 to your card. To confirm your card, enter the 4-digit
-        code that appears on your card activity next to the charged amount.
+        We will charge $1.95 to your card. Enter the 4-digit code that appears next to the charged amount and upload your bank statement to verify your credit or debit card.
       </div>
       <div className="border border-dashed mt-3">
         <div className="text-xs text-center border-separate py-1">
